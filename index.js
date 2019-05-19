@@ -32,7 +32,7 @@ function initList(data) {
       row = $("<div>").addClass("row");
     }
     var col = $("<div>")
-      .addClass("col-md-3 col-sm-6 mb-4")
+      .addClass("col-6 col-sm-6 col-md-3 mb-4")
       .appendTo(row);
     col.append(createCard(team));
   });
@@ -63,5 +63,9 @@ $(document).ready(function() {
       .text(team.intro)
       .appendTo(list);
   });
-  console.log("index.js document ready");
+
+  $("#teamModal").on("hide.bs.modal", function(event) {
+    var modal = $(this);
+    modal.find("#modal-detail").empty();
+  });
 });
