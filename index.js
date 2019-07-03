@@ -44,6 +44,25 @@ function createCards(data) {
   return card;
 }
 
+function createbubba(data) {
+  var card = $("<div>")
+    .addClass("thumbnail effect-bubba");
+  $("<img>")
+    .attr("src", data.image)
+    .attr("alt", "test")
+    .appendTo(card);
+  var content = $("<div>")
+    .addClass("team-content")
+    .appendTo(card);
+  $("<h3>")
+    .text(data.name)
+    .appendTo(content);
+  $("<p>")  
+    .text(TAGS[data.tags])
+    .appendTo(content);  
+  return card;
+}
+
 function initList(data) {
   var list = $("#teamList");
   var row = null;
@@ -55,7 +74,11 @@ function initList(data) {
     var col = $("<div>")
       .addClass("col-md-4 col-sm-6")
       .appendTo(row);
-    col.append(createCards(team));
+    if(index<3){
+      col.append(createCards(team));
+    } else {
+      col.append(createbubba(team));
+    }
   });
   list.append(row);
 }

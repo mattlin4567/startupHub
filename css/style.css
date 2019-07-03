@@ -17,6 +17,7 @@
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     position: relative;
+    padding: 0 !important;
 }
 .our-team img{
   width: 100%;
