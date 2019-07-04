@@ -25,7 +25,8 @@ function createCard(data) {
 
 function createCards(data) {
   var card = $("<div>")
-    .addClass("thumbnail our-team");
+    .addClass("thumbnail our-team")
+    .attr("data-index", data.index);
   $("<img>")
     .attr("src", data.image)
     .attr("alt", "test")
@@ -37,7 +38,7 @@ function createCards(data) {
     .addClass("title")
     .text(data.name)
     .appendTo(content);
-  $("<span>")  
+  $("<span>")
     .addClass("post")
     .text(TAGS[data.tags])
     .appendTo(content);
@@ -46,7 +47,8 @@ function createCards(data) {
 
 function createbubba(data) {
   var card = $("<div>")
-    .addClass("thumbnail effect-bubba");
+    .addClass("thumbnail effect-bubba")
+    .attr("data-index", data.index);
   $("<img>")
     .attr("src", data.image)
     .attr("alt", "test")
@@ -57,14 +59,14 @@ function createbubba(data) {
   $("<h3>")
     .text(data.name)
     .appendTo(content);
-  $("<p>")  
+  $("<p>")
     .text(TAGS[data.tags])
-    .appendTo(content);  
+    .appendTo(content);
   return card;
 }
 
 function initList(data) {
-  var list = $("#teamList");
+  var list = $("#team-list");
   var row = null;
   $(data).each(function(index, team) {
     if (index % 3 === 0) {
@@ -74,7 +76,7 @@ function initList(data) {
     var col = $("<div>")
       .addClass("col-md-4 col-sm-6")
       .appendTo(row);
-    if(index<3){
+    if (index < 3) {
       col.append(createCards(team));
     } else {
       col.append(createbubba(team));
@@ -87,4 +89,8 @@ $(document).ready(function() {
   if (TEAMS.length > 0) {
     initList(TEAMS);
   }
+
+  $("div.thumbnail").click(function() {
+    window.location = "./intro.html?team=" + $(this).attr("data-index");
+  });
 });

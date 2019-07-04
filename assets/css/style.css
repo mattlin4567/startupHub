@@ -1,0 +1,200 @@
+.card-body > h5 {
+  min-height: 48px;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.top-30 {
+  margin-top: 30px;
+}
+
+/* 團隊資料 intro */
+
+.project_description,
+.project_details {
+  margin-bottom: 30px;
+}
+
+.dividerHeading h4,
+.widget_title h4 {
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 21px;
+  font-weight: normal;
+  margin-bottom: 25px;
+  padding: 0 0 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.project_details .details li {
+  border-bottom: 1px solid #f2f2f2;
+  color: #a3a3a3;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 8px 0;
+}
+
+.project_details .details li span {
+  color: #686868;
+  display: block;
+  float: left;
+  font-weight: bold;
+  height: 20px;
+  position: relative;
+  width: 30%;
+}
+
+.project_details .details {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+}
+
+.dividerHeading h4,
+.widget_title h4 {
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 21px;
+  font-weight: normal;
+  margin-bottom: 25px;
+  padding: 0 0 10px;
+  position: relative;
+}
+
+/* owl-carousel 客製化 */
+
+.owl-item > img {
+  width: 200px;
+  height: 200px;
+}
+
+.owl-nav {
+  position: absolute;
+  top: -70px;
+  right: 0;
+}
+
+.owl-prev,
+.owl-next {
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  text-align: center;
+}
+.owl-prev:after,
+.owl-next:after {
+  font-family: "FontAwesome";
+  content: "\f104";
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.owl-next:after {
+  content: "\f105";
+}
+
+/* 團隊列表 hover 動畫(http://bestjquery.com/tutorial/our-team/demo65/) */
+.our-team {
+  background: #000;
+  text-align: center;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  padding: 0 !important;
+  cursor: pointer;
+}
+.our-team img {
+  width: 100%;
+  height: auto;
+  transition: all 0.55s ease 0s;
+}
+.our-team:hover img {
+  opacity: 0.5;
+}
+.our-team .team-content {
+  padding: 5px 10px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: rotate(45deg) translate(-50%, -50%);
+  transform-origin: 0 0;
+  transition: all 0.55s ease 0s;
+}
+.our-team:hover .team-content {
+  opacity: 1;
+}
+.our-team .team-content:before,
+.our-team .team-content:after {
+  content: "";
+  width: 400px;
+  height: 2px;
+  background: #95ccea;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  transform: translateX(100%);
+  transition: all 0.55s ease 0s;
+}
+.our-team .team-content:after {
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 10px;
+  transform: translateX(-100%);
+}
+.our-team:hover .team-content:before,
+.our-team:hover .team-content:after {
+  transform: translate(0, 0);
+  transition-delay: 0.15s;
+}
+.our-team .title {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+}
+.our-team .title:before,
+.our-team .title:after {
+  content: "";
+  width: 2px;
+  height: 300px;
+  background: #95ccea;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  transform: translateY(100%);
+  transition: all 0.55s ease 0s;
+}
+.our-team .title:after {
+  top: auto;
+  right: auto;
+  bottom: 10px;
+  left: 0;
+  transform: translateY(-100%);
+}
+.our-team:hover .title:before,
+.our-team:hover .title:after {
+  transform: translate(0, 0);
+}
+.our-team .post {
+  display: block;
+  padding: 5px 10px;
+  background: #95ccea;
+  font-size: 17px;
+  font-weight: 700;
+  color: #000;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 990px) {
+  .our-team {
+    margin-bottom: 30px;
+  }
+}
+
+/* style on mobile */
+@media (max-width: 768px) {
+}
