@@ -4,116 +4,163 @@
 const TEAMS = [
   {
     index: 0,
-    name: "翎生科技有限公司",
-    image: "./assets/images/20170526044625fbv.jpg",
-    intro:
-      "Blue Magpie Tech Corp.(BMTC)結合來自各領域的專家，致力於提供一站式的量身顧問服務；將AI及區塊鏈等技術引進金融、資本及新創產業，我們的使命是希望能夠成為推動產業升級以及協助企業掌握科技革命浪潮積極轉型、提升競爭優勢，共創雙贏！負責人黃芝翎在投資銀行業務和全球企業銀行業務方面擁有豐富的經驗，包括花旗銀行(於此期間認識鄒昌翰)，瑞士銀行和多家英國境內的銀行及歐盟和亞洲國有銀行的任職經驗，除此之外，她還曾在英國辦事處擔任部門主管，負責指導科學和創新項目；現在致力於區塊鏈領域，包括為金融機構，企業科技化以及協助新創公司和中小型企業從ICO及資本市場籌資。牛津大學理學學士和碩士。執行長鄒昌翰除了任職於花旗銀行和KPMG 顧問公司，其在金融服務和金融科技領域擁有相當廣泛的知識。他擅長於在新科技被大量運用前即發現市場趨勢，並建立戰略讓公司順應潮流和穩健發展。自2017年初以來，他一直致力於區塊鏈應用的開發，管理BlockEx亞洲辦事處，以及各種專案執行，並且首次代幣眾籌募集就超過2000萬美元。倫敦帝國理工學院的理學學士和碩士。",
+    name: '翎生科技有限公司',
+    image: './assets/images/20170526044625fbv.jpg',
+    intro: [
+      'Blue Magpie Tech Corp.(BMTC)結合來自各領域的專家，致力於提供一站式的量身顧問服務；將AI及區塊鏈等技術引進金融、資本及新創產業，我們的使命是希望能夠成為推動產業升級以及協助企業掌握科技革命浪潮積極轉型、提升競爭優勢，共創雙贏！',
+      '負責人黃芝翎在投資銀行業務和全球企業銀行業務方面擁有豐富的經驗，包括花旗銀行(於此期間認識鄒昌翰)，瑞士銀行和多家英國境內的銀行及歐盟和亞洲國有銀行的任職經驗，除此之外，她還曾在英國辦事處擔任部門主管，負責指導科學和創新項目；現在致力於區塊鏈領域，包括為金融機構，企業科技化以及協助新創公司和中小型企業從ICO及資本市場籌資。牛津大學理學學士和碩士。',
+      '執行長鄒昌翰除了任職於花旗銀行和KPMG 顧問公司，其在金融服務和金融科技領域擁有相當廣泛的知識。他擅長於在新科技被大量運用前即發現市場趨勢，並建立戰略讓公司順應潮流和穩健發展。自2017年初以來，他一直致力於區塊鏈應用的開發，管理BlockEx亞洲辦事處，以及各種專案執行，並且首次代幣眾籌募集就超過2000萬美元。倫敦帝國理工學院的理學學士和碩士。',
+    ],
     tags: [0],
   },
   {
     index: 1,
-    name: "AchievOR",
-    image: "./assets/images/se_20171220055217aqr.jpg",
-    intro:
-      "AchievOR 為台灣第一個以「技藝、經驗及興趣為主軸」串接起的職人社群，在這裡，每個人都可以專心做自己喜歡的事，並追尋自我滿足需求、成為一個Achievor。對我們來說，人生有很多可能，不該受到科系、職業、社會所框架住 ！讓職人能夠找到發揮的舞台、實現技能更大的專業價值是我們的使命，讓更多人能感受到這份熱情、看見每個不同的專業是我們對自己還有未來的期待！透過分享的課程與活動，更讓不論是上班族、親子、學生、團體等都能夠更深入、便捷探索與體驗各領域有趣人事物。並從職人對生活和技藝的熱情，感受到人生更多的可能性、創造對職業更不一樣的想像。AchievOR=Achieve+OR  你專心於喜歡的事，我致力於提供可能。而目前我們主要的團隊成員有兩位，每個人在自己負責的領域都有相對的經驗及專業。像是有負責對外關係管理的Vani，曾負責過許多商業行銷案、政府專案等。另一位為負責團隊內部管理的Ines，過去擔任過各式活動的美術總監、設計，在策略管理方面也有相當的經歷。除了我們之外，還有20幾位的職人共同與我們努力。期望能讓每個人都能成為AchievOR，也為更多人創造OR的機會。",
+    name: 'AchievOR',
+    image: './assets/images/se_20171220055217aqr.jpg',
+    intro: [
+      'AchievOR 為台灣第一個以「技藝、經驗及興趣為主軸」串接起的職人社群，在這裡，每個人都可以專心做自己喜歡的事，並追尋自我滿足需求、成為一個Achievor。',
+      '對我們來說，人生有很多可能，不該受到科系、職業、社會所框架住 ！讓職人能夠找到發揮的舞台、實現技能更大的專業價值是我們的使命，讓更多人能感受到這份熱情、看見每個不同的專業是我們對自己還有未來的期待！',
+      '透過分享的課程與活動，更讓不論是上班族、親子、學生、團體等都能夠更深入、便捷探索與體驗各領域有趣人事物。並從職人對生活和技藝的熱情，感受到人生更多的可能性、創造對職業更不一樣的想像。',
+      'AchievOR=Achieve+OR  你專心於喜歡的事，我致力於提供可能。',
+      '而目前我們主要的團隊成員有兩位，每個人在自己負責的領域都有相對的經驗及專業。像是有負責對外關係管理的Vani，曾負責過許多商業行銷案、政府專案等。另一位為負責團隊內部管理的Ines，過去擔任過各式活動的美術總監、設計，在策略管理方面也有相當的經歷。除了我們之外，還有20幾位的職人共同與我們努力。期望能讓每個人都能成為AchievOR，也為更多人創造OR的機會。',
+    ],
     tags: [0],
   },
   {
     index: 2,
-    name: "市民永續股份有限公司",
-    image: "./assets/images/se_20171006121210efu.jpg",
-    intro:
-      "市民永續股份有限公司是一間以區塊鏈技術，提供企業執行企業社會責任(CSR)措施之數據全球帳本服務，採用聯盟鏈架構，其中包含會計師數據確信簽章、金融單位社會責任投資(SRI)查看等多邊服務模式，發揮CSR策略效益，讓利害關係人獲得正面行動，企業經營者可從財務面上達成CSR永續經營效果。市民永續提供應用系統、雲端Baas、雲端開放API、認證數位簽帳、CSR內容揭露、CSR即時檢核等服務，讓企業、利害關係人、認證單位和金融服務單位能扮演適切角色，讓企業CSR措施能在財務策略上永續經營。為達成聯合國永續發展指標，發揮社會價值，我們不僅能協助大型企業，更重要的是透過區塊鏈建立量化程序和降低成本，協助中小企業遵循趨勢，實踐CSR，擴大民眾參與，達成全共同經營的願景。",
+    name: '市民永續股份有限公司',
+    image: './assets/images/se_20171006121210efu.jpg',
+    intro: [
+      '市民永續股份有限公司是一間以區塊鏈技術，提供企業執行企業社會責任(CSR)措施之數據全球帳本服務，採用聯盟鏈架構，其中包含會計師數據確信簽章、金融單位社會責任投資(SRI)查看等多邊服務模式，發揮CSR策略效益，讓利害關係人獲得正面行動，企業經營者可從財務面上達成CSR永續經營效果。',
+      '市民永續提供應用系統、雲端Baas、雲端開放API、認證數位簽帳、CSR內容揭露、CSR即時檢核等服務，讓企業、利害關係人、認證單位和金融服務單位能扮演適切角色，讓企業CSR措施能在財務策略上永續經營。為達成聯合國永續發展指標，發揮社會價值，我們不僅能協助大型企業，更重要的是透過區塊鏈建立量化程序和降低成本，協助中小企業遵循趨勢，實踐CSR，擴大民眾參與，達成全共同經營的願景。',
+    ],
     tags: [0],
   },
   {
     index: 3,
-    name: "永訊智庫股份有限公司",
-    image: "./assets/images/se_20171013122322srj.jpg",
-    intro:
-      "Sustaihub永訊智庫為提供SaaS（軟體即服務）雲端服務的新創公司，運用Ai技術進行數據分析及應用，協助企業更有效率的導入永續發展的管理機制。團隊的核心能力在於AI技術與CSR顧問服務，橫跨兩個專業領域提供創新的解決方案。「永續資料搜尋引擎」匯整所有永續發展資料至大數據資料庫，提供搜尋引擎、分析工具、潛在風險評估等功能。透過網路爬蟲蒐集永續發展相關資料，包括CSR報告、獎項評比、產業訊息等。使用者可搜尋CSR報告（PDF格式）內文，搭配條件式搜尋功能，精準的找到對應的資料。在系統上也可建立視覺圖表進行產業分析，協助企業做出更永續的商業決策。「永續報告管理系統」以GRI國際框架為基礎，各部門可在雲端系統上盤點永續資料、協作編輯、進度管理、匯出報告等功能，更有效率的管理永續資料。數位化管理的效益，在於可搜尋過去的資料檔案、篩選分析特定的指標欄位、複製前一年報告內容，並直接轉換不同的國際標準，從GRI對照SDGs、CDP等國際框架，協助企業接軌國際永續趨勢。「數據分析顧問諮詢」則是整合上述的搜尋引擎及管理系統，藉以取得內外部的永續資料，透過數據分析完整掌握企業發展CSR的優劣勢。同時，透過推薦系統媒合永續理念相同的非營利組織，將CSR資源投入在需要的對象，促進企業與外部利害關係人的溝通合作。",
+    name: '永訊智庫股份有限公司',
+    image: './assets/images/se_20171013122322srj.jpg',
+    intro: [
+      'Sustaihub永訊智庫為提供SaaS（軟體即服務）雲端服務的新創公司，運用Ai技術進行數據分析及應用，協助企業更有效率的導入永續發展的管理機制。團隊的核心能力在於AI技術與CSR顧問服務，橫跨兩個專業領域提供創新的解決方案。',
+      '「永續資料搜尋引擎」匯整所有永續發展資料至大數據資料庫，提供搜尋引擎、分析工具、潛在風險評估等功能。透過網路爬蟲蒐集永續發展相關資料，包括CSR報告、獎項評比、產業訊息等。使用者可搜尋CSR報告（PDF格式）內文，搭配條件式搜尋功能，精準的找到對應的資料。在系統上也可建立視覺圖表進行產業分析，協助企業做出更永續的商業決策。',
+      '「永續報告管理系統」以GRI國際框架為基礎，各部門可在雲端系統上盤點永續資料、協作編輯、進度管理、匯出報告等功能，更有效率的管理永續資料。數位化管理的效益，在於可搜尋過去的資料檔案、篩選分析特定的指標欄位、複製前一年報告內容，並直接轉換不同的國際標準，從GRI對照SDGs、CDP等國際框架，協助企業接軌國際永續趨勢。',
+      '「數據分析顧問諮詢」則是整合上述的搜尋引擎及管理系統，藉以取得內外部的永續資料，透過數據分析完整掌握企業發展CSR的優劣勢。同時，透過推薦系統媒合永續理念相同的非營利組織，將CSR資源投入在需要的對象，促進企業與外部利害關係人的溝通合作。',
+    ],
     tags: [0],
   },
   {
     index: 4,
-    name: "阿賴耶電影有限公司",
-    image: "./assets/images/se_20171013122322srj.jpg",
-    intro:
-      "「阿賴耶」(Alaya)在梵語中是積藏的意思，「阿賴耶識」即業(karma)種子的集聚和貯藏之處，是推動大千萬物運轉的一切因果之起源，也是真如本性的「本體基源」(ontological matrix)。這個概念貫徹了創辦人李奎穆對人類傳遞「故事」的本性及電影創作的影像哲學，也驅使著我們持續深耕影像創作及拓展影像新科技，並積極和其他領域跨界合作與激盪。阿賴耶電影有限公司自2018年底創立至今，已累積了外交部虛擬實境(VR)影片案《雙橡園》、輔導金長片《堀川》之3D VR前導短片《惡刑循環》、外交部TRA@40劇情短片《四十》…等作品，我們將秉持著人文關照的視角，凝視芸芸萬象，努力挖掘、探索聲音及影像語彙的全新疆界。",
+    name: '阿賴耶電影有限公司',
+    image: './assets/images/se_20171013122322srj.jpg',
+    intro: [
+      '「阿賴耶」(Alaya)在梵語中是積藏的意思,「阿賴耶識」即業(karma)種子的集聚和貯藏之處，是推動大千萬物運轉的一切因果之起源,也是真如本性的「本體基源」(ontological matrix)。這個概念貫徹了創辦人李奎穆對人類傳遞「故事」的本性及電影創作的影像哲學，也驅使著我們持續深耕影像創作及拓展影像新科技，並積極和其他領域跨界合作與激盪。',
+      '阿賴耶電影有限公司自2018年底創立至今，已累積了外交部虛擬實境(VR)影片案《雙橡園》、輔導金長片《堀川》之3D VR前導短片《惡刑循環》、外交部TRA@40劇情短片《四十》…等作品，我們將秉持著人文關照的視角，凝視芸芸萬象，努力挖掘、探索聲音及影像語彙的全新疆界。',
+    ],
     tags: [0],
   },
   {
     index: 5,
-    name: "沃畝股份有限公司(元沛農坊)",
-    image: "./assets/images/se_20171013122322srj.jpg",
-    intro:
-      "Lorem ipsum dolor sit amet, ad meis assum labitur has, qui delicata referrentur in. Bonorum conclusionemque ut mea, et aliquid inimicus adipiscing eam. Eum ea mollis dissentiunt. Impetus gubergren mea ea, pri id omnes propriae legendos. Id vel euismod atomorum, at assentior consectetuer vix. Id duo solum summo.",
+    name: '思言科技股份有限公司',
+    image: './assets/images/se_20171013122322srj.jpg',
+    intro: [
+      '我們是OH!Bot，做ChatBot 找OH!Bot。 我們解決中小企業開發APP所遇到的痛點 開發雙平台費用高昂，好不容易開發完了下載率好低，到使用者手機中，一個月開不到一次。透過Line 聊天機器人以及我們的軟體整合服務，成功解決APP的下載率低、開啟率低 使用率低的三低問題。',
+      '而團隊組成來自於華碩與WD等世界知名大廠，共同創辦人均有超過五年以上APP軟體開發經驗，我們深知APP開發的痛點與難度，OH!Bot讓中小企業有更好的軟體服務選擇。OH!Bot 讓ChatBot 不只是 Chat Bot，更是一個APP服務',
+    ],
     tags: [0],
   },
   {
     index: 6,
-    name: "沃畝股份有限公司(元沛農坊)",
-    image: "./assets/images/se_20171013122322srj.jpg",
-    intro:
-      "Lorem ipsum dolor sit amet, ad meis assum labitur has, qui delicata referrentur in. Bonorum conclusionemque ut mea, et aliquid inimicus adipiscing eam. Eum ea mollis dissentiunt. Impetus gubergren mea ea, pri id omnes propriae legendos. Id vel euismod atomorum, at assentior consectetuer vix. Id duo solum summo.",
+    name: '時習教育有限公司',
+    image: './assets/images/se_20171013122322srj.jpg',
+    intro: [
+      '2015年開始醞釀的時習教育，直到2018年才正式轉型為社會創新企業。經過幾次學校提案、商業合作的經驗後，時習教育從實戰中找到自己在市場、教育環境的定位－協助學校革新、替爸媽解憂、用課程與遊戲活動，讓孩子重新愛上知識。目前時習教育不僅與各教育相關單位，如國立科學教育館緊密合作，更穩定舉辦親子共學的課程。',
+      '時習教育的第一個大型專案，便是以AR（擴增實境）看見數學的咖啡廳密室—《沉默記憶》。2017年在深坑國中實施全校遊戲時，一位剛參加完遊戲的學生神采奕奕地說：「老師！我都不覺得有數學啊！」。至今，《沉默記憶》已於50多所學校實施，並成功影響許多學子對數學的觀點與看法。',
+    ],
     tags: [0],
   },
   {
     index: 7,
-    name: "沃畝股份有限公司(元沛農坊)",
-    image: "./assets/images/se_20171013122322srj.jpg",
-    intro:
-      "Lorem ipsum dolor sit amet, ad meis assum labitur has, qui delicata referrentur in. Bonorum conclusionemque ut mea, et aliquid inimicus adipiscing eam. Eum ea mollis dissentiunt. Impetus gubergren mea ea, pri id omnes propriae legendos. Id vel euismod atomorum, at assentior consectetuer vix. Id duo solum summo.",
+    name: '登山書股份有限公司',
+    image: './assets/images/se_20171013122322srj.jpg',
+    intro: [
+      'Hikingbook 為山林愛好者提供創新解決方案，打造完整易用的登山服務。我們的服務完整涵蓋登山各階段之需求：',
+      '1) 行前規劃：完善的規劃是登山安全的關鍵，我們提供超過萬筆路線的資料庫供使用者查詢、下載，並可搭配行前規劃助手，快速產出登山計劃；使用者也可透過智慧路線推薦查路線難度是否符合自身能力，確保登山安全。',
+      '2) 路徑紀錄：Hikingbook App 內建全球離線地圖，沒有網路也能透過 GPS 確認當前位置。使用者可以紀錄行程軌跡、建立圖文並茂的紀錄點，保存登山歷程，並可使用自動安全回報功能，讓山下親友即時掌握登山進度。',
+      '3) 雲端同步與分享：支援一鍵同步行程，無須擔心資料遺失。可匯出行程紀錄為多種格式，輕鬆分享，建立緊密連結、資訊暢通的登山社群。',
+      '我們相信，人身為大自然的一份子，都能安全、自在地徜徉並享受山林。至 2019 年初，Hikingbook 已有超過 4 萬使用者、累積超過萬筆全球行程， 並有超過 2,000 份 App 好評。透過創新科技，讓每一位山林愛好者能盡情探索世界每一處山林。',
+    ],
     tags: [0],
   },
   {
     index: 8,
-    name: "沃畝股份有限公司(元沛農坊)",
-    image: "./assets/images/se_20171013122322srj.jpg",
-    intro:
-      "Lorem ipsum dolor sit amet, ad meis assum labitur has, qui delicata referrentur in. Bonorum conclusionemque ut mea, et aliquid inimicus adipiscing eam. Eum ea mollis dissentiunt. Impetus gubergren mea ea, pri id omnes propriae legendos. Id vel euismod atomorum, at assentior consectetuer vix. Id duo solum summo.",
+    name: '樂易創',
+    image: './assets/images/se_20171013122322srj.jpg',
+    intro: [
+      '樂易創公司介紹「全球最完整音樂社群」',
+      '1.讓全世界任何想寫歌的人都可在10分鐘內輕鬆完成,並分享創作的喜悅',
+      '2.讓想天天聽高水準新歌(200首以上)的人都可在我們社群平台得到滿足',
+      '3.讓音樂人能天天有優質新歌可表演與發表,同時獲得合理的報酬',
+      '首創的手機歌曲創作”樂點APP” (免費下載) + AI引擎(雲端) , 操作方式就像拼裝音樂積木,先選擇主歌副歌的組成型態,再由AI引擎負責推薦適合內容,讓使用者自由挑選組合,然後完成整首歌曲創作,接下來挑選照片或影片,再將歌詞,音樂與自己歌聲(可沒有)合成mp4分享給親朋好友。',
+      '分析使用者操作與音樂偏好,推薦更適合的音樂組合給使用者,提高滿意度與黏性。獲利模式:1.歌曲的儲存空間(50首年費10USD) 2.廣告 3.加值服務(如樂器選擇/編曲選擇/歌手代唱…..等等)。',
+      '1.音樂AI技術團隊為清華大學 2.版權部份邀請政大智財所老師與資策會科法所(版權區塊鏈)參與顧問 3.台北市音樂創作職業工會總幹事彭先生協調音樂界朋友參與 4.未來將邀請更多人士參與。',
+    ],
     tags: [0],
   },
   {
     index: 9,
-    name: "沃畝股份有限公司(元沛農坊)",
-    image: "./assets/images/se_20171013122322srj.jpg",
-    intro:
-      "Lorem ipsum dolor sit amet, ad meis assum labitur has, qui delicata referrentur in. Bonorum conclusionemque ut mea, et aliquid inimicus adipiscing eam. Eum ea mollis dissentiunt. Impetus gubergren mea ea, pri id omnes propriae legendos. Id vel euismod atomorum, at assentior consectetuer vix. Id duo solum summo.",
+    name: '應用錢包區塊鏈股份有限公司',
+    image: './assets/images/se_20171013122322srj.jpg',
+    intro: [
+      '公司主要的產品是 "Dapp Pocket"。Dapp Pocket 讓你方便又安全的管理加密貨幣。有了 Dapp Pocket，你可以在手機上使用 2000+ 種的 Dapp (區塊鏈應用)，還可以找到最便宜的價格並即時地兌換各種加密貨幣。公司的核心成員過去在台大資工所研究區塊鏈技術，並具有多家區塊鏈新創經驗。公司也獲選加入行政院新創基地、台大創創中心、美國的 YC Startup School、新加坡的 BLOCK71 等知名創業育成機構。',
+    ],
     tags: [0],
   },
   {
     index: 10,
-    name: "沃畝股份有限公司(元沛農坊)",
-    image: "./assets/images/se_20171013122322srj.jpg",
-    intro:
-      "Lorem ipsum dolor sit amet, ad meis assum labitur has, qui delicata referrentur in. Bonorum conclusionemque ut mea, et aliquid inimicus adipiscing eam. Eum ea mollis dissentiunt. Impetus gubergren mea ea, pri id omnes propriae legendos. Id vel euismod atomorum, at assentior consectetuer vix. Id duo solum summo.",
+    name: 'FunFormosa TransMedia WorkInGroup',
+    image: './assets/images/se_20171013122322srj.jpg',
+    intro: [
+      '【本媒體轉譯協作社群的核心倡議理念與定位】以中性與彈性的組織協作方式，凝聚集結不同領域的工作團隊、專業人士與相關外部資源，在對於協作群宗旨的認同與共識下，靈活運用各式不同的新媒體科技與數位媒介，將在地社會人文內涵/風情特色的知識主體與故事文本，融入創藝風格表現，轉譯製作出具有文化性/教育性/社會性意義的相關協作成果。讓大眾與未來世代能以多元角度認識我們共有的寶貴天地，並經由適當的界面途徑，也幫助國際友人有機會接觸了解，台灣社會與環境的諸多美好面向。協作群以“ button up” 的主動開創導向，共同分工協作進行各項具創意與社會正向價值的專案製作計畫」。',
+      '【實績案例簡介】2017 文化部文化創意產業補助計畫－「樂飛遊滬新境趣」在地空間特性 / 歷史人文脈絡 / 創藝新媒體淡水申遺古蹟群 跨域融合 文化教育觀光 加值前導計畫',
+      '三項子計劃製作： { 愛的足跡 ∙ 馬偕之路 } 4K 裸視 3D 影音文史觀光導覽系統  { 時空樂氣球 ∙ 虛實淡水遊 } 實景 VR 古蹟空間互動體驗 { 我的DIY彩繪古蹟 } 3D 彩繪立體模型創客工作站',
+      '協作執行成果概述：◆ 三項媒體轉譯內容都包含有 華語/英語/法語/日語/韓語/越語 六國語言版本  ◆ 運用三項台灣自主專利技術開發製作 ◆ 結合三個各有特色的文化場域提供民眾免費瀏覽體驗 (淡水紅毛城英國領事館 / 淡水遊客旅遊中心 / 日日心塾文創基地)  ◆ 計畫協作成果並受邀於 2018 台灣文博會「洞見新勢力」中展出 ',
+    ],
     tags: [1],
   },
   {
     index: 11,
-    name: "沃畝股份有限公司(元沛農坊)",
-    image: "./assets/images/se_20171013122322srj.jpg",
-    intro:
-      "Lorem ipsum dolor sit amet, ad meis assum labitur has, qui delicata referrentur in. Bonorum conclusionemque ut mea, et aliquid inimicus adipiscing eam. Eum ea mollis dissentiunt. Impetus gubergren mea ea, pri id omnes propriae legendos. Id vel euismod atomorum, at assentior consectetuer vix. Id duo solum summo.",
+    name: 'G0V 零時政府國際交流',
+    image: './assets/images/se_20171013122322srj.jpg',
+    intro: [
+      '「自己的國際交流自己做」，以社群為本、符合 g0v 精神的的國際交流怎麼做？如何避免國際交流的成果變成封閉、集中、屬於少數人的知識，讓這些連結回饋社群，也在開放治理的同時兼顧效率？為了探詢可能的解答，幾個g0v參與者開始了g0v-intl工作小組。',
+      'g0v-intl工作小組的第一個專案，是與日、韓黑客協作的Facing the Ocean Meet& Hack。 台、日、韓間的協作，從國際會議中場玩笑起頭，閒聊後卻發現成為一種共感，最後經過三國參與者的討論，決定以沖繩舉辦「面海黑客松Facing the Ocean Meet& Hack」做為三國協作、開放、深入國際交流的第一個專案。對台、日、韓三國的參與者來說，這裡能發現更多跨海協作的可能性，對 g0v-intl 工作小組來說，這裡則是在國際交流過程中實踐 g0v 開放、協作、共享理念的一次實驗。',
+    ],
     tags: [1],
   },
   {
     index: 12,
-    name: "沃畝股份有限公司(元沛農坊)",
-    image: "./assets/images/se_20171013122322srj.jpg",
-    intro:
-      "Lorem ipsum dolor sit amet, ad meis assum labitur has, qui delicata referrentur in. Bonorum conclusionemque ut mea, et aliquid inimicus adipiscing eam. Eum ea mollis dissentiunt. Impetus gubergren mea ea, pri id omnes propriae legendos. Id vel euismod atomorum, at assentior consectetuer vix. Id duo solum summo.",
+    name: '台灣人工智慧學校校友會',
+    image: './assets/images/se_20171013122322srj.jpg',
+    intro: [
+      '台灣人工智慧學校於2018年成立，分別位於台北、新竹、台中、南部分校，共計四所，學校成立宗旨將著眼社會整體利益與永續發展，為台灣培育科研及產業所需之人工智慧人才，並推動人才與機會的媒合，以提升台灣國際競爭力為己任。',
+      '而台灣人工智慧學校校友會為多元領域不同產業經理人班及技術班校友組成，由於校友成員之間連結強、群聚效應高，兼具技術落地整合商業價值優勢，堪稱台灣人工智慧先驅火車頭。而台灣人工智慧學校校友會為促進交流，也常定期舉辦各類經常性活動，串聯校友參加，也定期舉辦各類創新講座或課程，協助校友利用AI知識及技能創業。',
+      '期待藉由校友會的力量，凝聚產官學研各界資源及資訊，協助解決校友及各產業所面臨之數位轉型及AI相關問題，共同改善國內的科技創新及創業環境！',
+    ],
     tags: [1],
   },
   {
     index: 13,
-    name: "沃畝股份有限公司(元沛農坊)",
-    image: "./assets/images/se_20171013122322srj.jpg",
-    intro:
-      "Lorem ipsum dolor sit amet, ad meis assum labitur has, qui delicata referrentur in. Bonorum conclusionemque ut mea, et aliquid inimicus adipiscing eam. Eum ea mollis dissentiunt. Impetus gubergren mea ea, pri id omnes propriae legendos. Id vel euismod atomorum, at assentior consectetuer vix. Id duo solum summo.",
+    name: '作客',
+    image: './assets/images/se_20171013122322srj.jpg',
+    intro: [
+      '作客是一種生活型態，存在你我的平凡生活之間， 一個簡單的詞彙，就代表著形形色色的作客生活。',
+      '畢業：104年客家產業創業培訓班第一期，我們因一起而結緣，在104-108年利用工作之餘，我們開始思考其客家文化如何深植客家人心中，並讓一般大眾也能了解客家淵源及歷史。',
+      '理念：客家產業=客家文化。',
+      '解決：耆老對傳遞客家文化較無創新，導致後生對投入客家產業較無感。',
+      '產業→1.深化與廣化客家產業店家 (特色挖掘及品牌深化企業診斷) →2.客家產業深度旅遊遊程規劃 商品→1.客家視覺形象創作→2.客家包裝輔導設計服務→1.客家文化平面創作→2.輔導創業計畫譔寫',
+    ],
     tags: [1],
   },
 ];
 
-const TAGS = ["新創團隊", "社群聚落"];
+const TAGS = ['新創團隊', '社群聚落'];
