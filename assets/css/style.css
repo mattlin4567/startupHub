@@ -6,13 +6,52 @@
   cursor: pointer;
 }
 
-.top-30 {
+.container {
   margin-top: 30px;
 }
 
 .top-16 {
   margin-top: 16px;
   margin-bottom: 30px;
+}
+
+.float {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  top: 20vh;
+  color: #fff;
+  text-align: center;
+}
+
+.float > div {
+  background-color: #f8b302;
+  cursor: pointer;
+}
+
+.side-menu > div:hover {
+  color: #555555;
+}
+
+.side-menu {
+  max-width: 20vw;
+  font-size: 1.8rem;
+}
+
+.side-menu > div {
+  border: solid 1px #fff;
+  padding: 3px 0;
+}
+
+.side-menu-title {
+  border-right: solid 2px #fff;
+  padding: 12px 8px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 2rem;
+  max-height: 120px;
+  border-radius: 15px 0px 0px 15px;
 }
 
 /* 團隊資料 intro */
@@ -212,12 +251,57 @@
   color: #000;
   text-transform: capitalize;
 }
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 992px) {
   .our-team {
     margin-bottom: 30px;
   }
 }
 
+@media screen and (max-height: 768px) {
+  .float {
+    top: 10vh;
+  }
+  .side-menu {
+    font-size: 1.5rem;
+  }
+}
+
 /* style on mobile */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-top: 8px;
+  }
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.list-item {
+  display: flex;
+  padding: 8px 0px;
+  border-bottom: solid 1px #c0c0c0;
+}
+
+.list-item > div {
+  display: flex;
+}
+
+.list-item-avatar {
+  justify-content: center;
+}
+
+.list-item-content {
+  flex: 1;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.list-item-chevron {
+  align-items: center;
+  color: #c0c0c0;
 }

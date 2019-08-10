@@ -1,28 +1,3 @@
-function createCard(data) {
-  var card = $('<div>')
-    .addClass('card')
-    .attr('data-toggle', 'modal')
-    .attr('data-target', '#teamModal')
-    .attr('data-index', data.index);
-  var img = $('<img>')
-    .addClass('card-img-top')
-    .attr('src', data.image)
-    .attr('alt', 'test')
-    .appendTo(card);
-  var body = $('<div>')
-    .addClass('card-body')
-    .appendTo(card);
-  $('<h5>')
-    .addClass('card-title')
-    .text(data.name)
-    .appendTo(body);
-  $('<span>')
-    .addClass('badge badge-primary')
-    .text(TAGS[data.tags])
-    .appendTo(body);
-  return card;
-}
-
 function createCards(data) {
   var img = `./assets/images/${data.index}/logo.jpg`;
   var card = $('<div>')
@@ -46,48 +21,73 @@ function createCards(data) {
   return card;
 }
 
-function createbubba(data) {
-  var card = $('<div>')
-    .addClass('thumbnail effect-bubba')
-    .attr('data-index', data.index);
-  $('<img>')
-    .attr('src', data.image)
-    .attr('alt', 'test')
-    .appendTo(card);
-  var content = $('<div>')
-    .addClass('team-content')
-    .appendTo(card);
-  $('<h3>')
+function createSideMenu(data) {
+  var item = $('<div>')
     .text(data.name)
-    .appendTo(content);
-  $('<p>')
-    .text(TAGS[data.tags])
-    .appendTo(content);
-  return card;
+    .attr('data-index', data.index);
+  return item;
 }
 
-function initList(data) {
+function createMobileList(data) {
+  var img = `./assets/images/${data.index}/logo.jpg`;
+  var item = $('<div>').addClass('list-item');
+  var avatar = $('<div>').addClass('list-item-avatar');
+  $('<img>')
+    .addClass('avatar')
+    .attr('src', img)
+    .appendTo(avatar);
+  var content = $('<div>')
+    .addClass('list-item-content')
+    .text(data.name)
+    .attr('data-index', data.index);
+  var chevron = $('<div>').addClass('list-item-chevron');
+  $('<i>')
+    .addClass('fa fa-chevron-right')
+    .appendTo(chevron);
+  item.append(avatar);
+  item.append(content);
+  item.append(chevron);
+  return item;
+}
+
+function initPage(data) {
   var list = $('#team-list');
-  var row = null;
-  list.append(row);
-  row = $('<div>').addClass('row form-group');
+  var sideMenu = $('.side-menu');
+  var row = $('<div>').addClass('row form-group hidden-xs');
+  var mobile = $('<div>').addClass('visible-xs-block');
   $(data).each(function(index, team) {
-    if (index % 3 === 0) {
-    }
     var col = $('<div>')
-      .addClass('col-md-4 col-sm-6 col-xs-6')
+      .addClass('col-sm-3 col-xs-6')
       .appendTo(row);
     col.append(createCards(team));
+    sideMenu.append(createSideMenu(team));
+    mobile.append(createMobileList(team));
   });
   list.append(row);
+  list.append(mobile);
+}
+
+function navgation() {
+  window.location = './intro.html?team=' + $(this).attr('data-index');
 }
 
 $(document).ready(function() {
   if (TEAMS.length > 0) {
-    initList(TEAMS);
+    initPage(TEAMS);
   }
-
-  $('div.thumbnail').click(function() {
-    window.location = './intro.html?team=' + $(this).attr('data-index');
-  });
+  $('.float').hover(
+    function() {
+      $(this)
+        .stop()
+        .animate({ right: '0' }, 'medium');
+    },
+    function() {
+      $(this)
+        .stop()
+        .animate({ right: '-20vw' }, 'medium');
+    },
+    500
+  );
+  $('div.thumbnail').click(navgation);
+  $('.side-menu div').click(navgation);
 });
