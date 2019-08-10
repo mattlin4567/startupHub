@@ -257,15 +257,6 @@
   }
 }
 
-@media screen and (max-height: 768px) {
-  .float {
-    top: 10vh;
-  }
-  .side-menu {
-    font-size: 1.5rem;
-  }
-}
-
 /* style on mobile */
 @media only screen and (max-width: 768px) {
   .container {
