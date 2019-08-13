@@ -1,3 +1,6 @@
+html {
+  font-family: 微軟正黑體, 'Arial Unicode MS';
+}
 .card-body > h5 {
   min-height: 48px;
 }
@@ -61,6 +64,10 @@
   margin-bottom: 16px;
 }
 
+.project_description > p {
+  font-size: 16px;
+}
+
 .project_details {
   border-top: 1px solid #e2e2e2;
 }
@@ -69,7 +76,7 @@
 .widget_title h4 {
   border-bottom: 1px solid #e2e2e2;
   font-size: 21px;
-  font-weight: normal;
+  font-weight: 500;
   margin-bottom: 25px;
   padding: 0 0 10px;
   position: relative;

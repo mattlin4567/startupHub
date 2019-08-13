@@ -1,18 +1,45 @@
 function initIntro(team) {
   var description = $('.project_description');
+  var buttonGroup = $('#social-link');
   $('#team_name h4 span').text(team.name);
   team.intro.forEach(element => {
     $('<p>')
       .text(element)
       .appendTo(description);
   });
+  if (team.web) {
+    var btn = $('<button>')
+      .attr('type', 'button')
+      .addClass('btn');
+    $('<i>')
+      .addClass('fa fa-globe')
+      .appendTo(btn);
+    btn.bind('click', function() {
+      window.location = team.web;
+    });
+    buttonGroup.append(btn);
+  }
+  if (team.fb) {
+    var btn = $('<button>')
+      .attr('type', 'button')
+      .addClass('btn');
+    $('<i>')
+      .addClass('fa fa-facebook')
+      .appendTo(btn);
+    btn.bind('click', function() {
+      window.location = team.fb;
+    });
+    buttonGroup.append(btn);
+  }
 }
 
 function initImagesCarousel(index) {
   var list = $('.carousel-inner');
   for (var i = 0; i < 2; i++) {
+    if (i === 1 && index === '8') {
+      continue;
+    }
     var img = `./assets/images/${index}/carousel${i + 1}.jpg`;
-    console.info(img);
     var item = $('<div>').addClass('item');
     $('<img>')
       .attr('src', img)

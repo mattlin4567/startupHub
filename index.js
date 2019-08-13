@@ -30,7 +30,9 @@ function createSideMenu(data) {
 
 function createMobileList(data) {
   var img = `./assets/images/${data.index}/logo.jpg`;
-  var item = $('<div>').addClass('list-item');
+  var item = $('<div>')
+    .addClass('list-item')
+    .attr('data-index', data.index);
   var avatar = $('<div>').addClass('list-item-avatar');
   $('<img>')
     .addClass('avatar')
@@ -38,8 +40,7 @@ function createMobileList(data) {
     .appendTo(avatar);
   var content = $('<div>')
     .addClass('list-item-content')
-    .text(data.name)
-    .attr('data-index', data.index);
+    .text(data.name);
   var chevron = $('<div>').addClass('list-item-chevron');
   $('<i>')
     .addClass('fa fa-chevron-right')
@@ -90,4 +91,5 @@ $(document).ready(function() {
   );
   $('div.thumbnail').click(navgation);
   $('.side-menu div').click(navgation);
+  $('.list-item').click(navgation);
 });
