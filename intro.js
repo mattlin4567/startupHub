@@ -8,31 +8,25 @@ function initIntro(team) {
       .appendTo(description);
   });
   if (team.web) {
-    var btn = $('<button>')
-      .attr('type', 'button')
-      .addClass('btn');
-    $('<i>')
-      .addClass('fa fa-globe')
-      .appendTo(btn);
-    btn.bind('click', function() {
-      window.location = team.web;
-    });
-    buttonGroup.append(btn);
+    buttonGroup.append(initSocialButton(0, team.web));
   }
   if (team.fb) {
-    var btn = $('<button>')
-      .attr('type', 'button')
-      .addClass('btn');
-    $('<i>')
-      .addClass('fa fa-facebook')
-      .appendTo(btn);
-    btn.bind('click', function() {
-      window.location = team.fb;
-    });
-    buttonGroup.append(btn);
+    buttonGroup.append(initSocialButton(1, team.fb));
   }
 }
-
+function initSocialButton(type, url){
+  var icon = type ? 'fa fa-facebook' : 'fa fa-globe';
+  var btn = $('<button>')
+      .attr('type', 'button')
+      .addClass('btn');
+  $('<i>')
+    .addClass(icon)
+    .appendTo(btn);
+  btn.bind('click', function() {
+    window.location = url;
+  });
+  return btn;
+}
 function initImagesCarousel(index) {
   var list = $('.carousel-inner');
   for (var i = 0; i < 2; i++) {
