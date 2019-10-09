@@ -14,11 +14,11 @@ function initIntro(team) {
     buttonGroup.append(initSocialButton(1, team.fb));
   }
 }
-function initSocialButton(type, url){
+function initSocialButton(type, url) {
   var icon = type ? 'fa fa-facebook' : 'fa fa-globe';
   var btn = $('<button>')
-      .attr('type', 'button')
-      .addClass('btn');
+    .attr('type', 'button')
+    .addClass('btn');
   $('<i>')
     .addClass(icon)
     .appendTo(btn);
@@ -27,8 +27,19 @@ function initSocialButton(type, url){
   });
   return btn;
 }
-function initImagesCarousel(index) {
+function initImagesCarousel(team) {
   var list = $('.carousel-inner');
+  var index = team.index;
+  if (team.youtube) {
+    console.info(team.youtube);
+    var video = $('<div>').addClass('item');
+    $('<iframe>')
+      .attr('width', 800)
+      .attr('height', 466)
+      .attr('src', `https://www.youtube.com/embed/${team.youtube}`)
+      .appendTo(video);
+    list.append(video);
+  }
   for (var i = 0; i < 2; i++) {
     if (i === 1 && index === '8') {
       continue;
@@ -81,7 +92,7 @@ function getTeamIndex() {
 $(document).ready(function() {
   var teamIndex = getTeamIndex();
   initIntro(TEAMS[teamIndex]);
-  initImagesCarousel(teamIndex);
+  initImagesCarousel(TEAMS[teamIndex]);
   initTeamsCarousel(TEAMS);
   $('.owl-carousel').owlCarousel({
     startPosition: teamIndex,

@@ -303,3 +303,13 @@ html {
   align-items: center;
   color: #c0c0c0;
 }
+/* 覆寫 bootstrap */
+.carousel-inner > .item {
+  height: 466px;
+  background-color: #000000;
+}
+
+.carousel-inner > .active {
+  display: flex !important;
+  align-items: center;
+}
