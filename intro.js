@@ -100,10 +100,16 @@ function onPlayerStateChange(event) {
 }
 
 function onYouTubeIframeAPIReady() {
+  var height = '437';
+  var width = '750';
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+    height = '201';
+    width = '345';
+  }
   var player = new YT.Player('player', {
-    height: '437',
-    width: '750',
     videoId: TEAMS[getTeamIndex()].youtube,
+    height: height,
+    width: width,
     events: {
       'onStateChange': onPlayerStateChange
     }
