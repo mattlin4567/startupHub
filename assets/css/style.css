@@ -304,12 +304,11 @@ html {
   color: #c0c0c0;
 }
 /* 覆寫 bootstrap */
-.carousel-inner > .item {
-  height: 466px;
-  background-color: #000000;
+
+.carousel-control {
+  display: none;
 }
 
-.carousel-inner > .active {
-  display: flex !important;
-  align-items: center;
+.carousel-control:hover {
+  display: block;
 }

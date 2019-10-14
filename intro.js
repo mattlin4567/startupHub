@@ -30,15 +30,10 @@ function initSocialButton(type, url) {
 function initImagesCarousel(team) {
   var list = $('.carousel-inner');
   var index = team.index;
+  
   if (team.youtube) {
-    console.info(team.youtube);
-    var video = $('<div>').addClass('item');
-    $('<iframe>')
-      .attr('width', 800)
-      .attr('height', 466)
-      .attr('src', `https://www.youtube.com/embed/${team.youtube}`)
-      .appendTo(video);
-    list.append(video);
+    var item = $('<div>').addClass('item').appendTo(list);
+    $('<div>').attr('id', 'player').appendTo(item);
   }
   for (var i = 0; i < 2; i++) {
     if (i === 1 && index === '8') {
@@ -87,6 +82,32 @@ function initTeamsCarousel(data) {
 function getTeamIndex() {
   var results = new RegExp('[?&]team=([^&#]*)').exec(window.location.search);
   return results !== null ? results[1] || 0 : false;
+}
+
+function onPlayerStateChange(event) {
+  if (event.data === YT.PlayerState.PLAYING) {
+    $("#myCarousel").carousel("pause");
+    $(".carousel-indicators").hide();
+  } 
+  if(event.data === YT.PlayerState.PAUSED){
+    $("#myCarousel").carousel("cycle");
+    $(".carousel-indicators").show();
+  }
+  if(event.data === YT.PlayerState.ENDED){
+    $(".carousel-indicators").show();
+  }
+    
+}
+
+function onYouTubeIframeAPIReady() {
+  var player = new YT.Player('player', {
+    height: '437',
+    width: '750',
+    videoId: TEAMS[getTeamIndex()].youtube,
+    events: {
+      'onStateChange': onPlayerStateChange
+    }
+  });
 }
 
 $(document).ready(function() {
