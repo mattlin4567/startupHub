@@ -72,6 +72,20 @@ function navgation() {
   window.location = './intro.html?team=' + $(this).attr('data-index');
 }
 
+function onYouTubeIframeAPIReady() {
+  var height = '695';
+  var width = '1140';
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+    height = '201';
+    width = '345';
+  }
+  player = new YT.Player('intro-video', {
+    videoId: 'H6zsD_G9bt8',
+    height: height,
+    width: width
+  });
+}
+
 $(document).ready(function() {
   if (TEAMS.length > 0) {
     initPage(TEAMS);

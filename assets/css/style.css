@@ -1,6 +1,11 @@
 html {
   font-family: 微軟正黑體, 'Arial Unicode MS';
 }
+
+.video-container {
+  text-align: center;
+}
+
 .card-body > h5 {
   min-height: 48px;
 }
@@ -311,4 +316,16 @@ html {
 
 .carousel-control:hover {
   display: block;
+}
+
+.carousel-indicators {
+  bottom: -35px !important;
+}
+
+.carousel-indicators li {
+  border: 1px solid #444444;
+}
+
+.carousel-indicators .active {
+  background-color: #444444;
 }

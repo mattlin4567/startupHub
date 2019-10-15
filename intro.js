@@ -1,3 +1,5 @@
+var player;
+
 function initIntro(team) {
   var description = $('.project_description');
   var buttonGroup = $('#social-link');
@@ -87,16 +89,10 @@ function getTeamIndex() {
 function onPlayerStateChange(event) {
   if (event.data === YT.PlayerState.PLAYING) {
     $("#myCarousel").carousel("pause");
-    $(".carousel-indicators").hide();
   } 
   if(event.data === YT.PlayerState.PAUSED){
     $("#myCarousel").carousel("cycle");
-    $(".carousel-indicators").show();
   }
-  if(event.data === YT.PlayerState.ENDED){
-    $(".carousel-indicators").show();
-  }
-    
 }
 
 function onYouTubeIframeAPIReady() {
@@ -106,7 +102,7 @@ function onYouTubeIframeAPIReady() {
     height = '201';
     width = '345';
   }
-  var player = new YT.Player('player', {
+  player = new YT.Player('player', {
     videoId: TEAMS[getTeamIndex()].youtube,
     height: height,
     width: width,
@@ -143,5 +139,9 @@ $(document).ready(function() {
 
   $('div.thumbnail').click(function() {
     window.location = './intro.html?team=' + $(this).attr('data-index');
+  });
+
+  $("#myCarousel").on('slide.bs.carousel', function (){
+    player.stopVideo();
   });
 });
