@@ -287,6 +287,11 @@ html {
   .container {
     margin-top: 8px;
   }
+
+  .video-container {
+    height: 25vh;
+    margin: 0 15px;
+  }
 }
 .avatar {
   vertical-align: middle;
