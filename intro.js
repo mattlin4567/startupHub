@@ -31,14 +31,21 @@ function initSocialButton(type, url) {
 }
 function initImagesCarousel(team) {
   var list = $('.carousel-inner');
+  var indicator = $('.carousel-indicators');
+  var indicatorIndex = 0;
   var index = team.index;
   
   if (team.youtube) {
     var item = $('<div>').addClass('item').appendTo(list);
     $('<div>').attr('id', 'player').appendTo(item);
+    $('<li>')
+      .attr('data-target', '#myCarousel')
+      .attr('data-slide-to', indicatorIndex)
+      .appendTo(indicator);
+    indicatorIndex++;
   }
   for (var i = 0; i < 2; i++) {
-    if (i === 1 && index === '8') {
+    if (i === 1 && index == 8) {
       continue;
     }
     var img = `./assets/images/${index}/carousel${i + 1}.jpg`;
@@ -48,8 +55,17 @@ function initImagesCarousel(team) {
       .css('width', '100%')
       .appendTo(item);
     list.append(item);
+    $('<li>')
+      .attr('data-target', '#myCarousel')
+      .attr('data-slide-to', indicatorIndex)
+      .appendTo(indicator);
+    indicatorIndex++;
   }
   list
+    .children()
+    .first()
+    .addClass('active');
+  indicator
     .children()
     .first()
     .addClass('active');
@@ -142,6 +158,20 @@ $(document).ready(function() {
   });
 
   $("#myCarousel").on('slide.bs.carousel', function (){
-    player.stopVideo();
+    if($("#player").length){
+      player.stopVideo();
+    }
+  });
+
+  $("#myCarousel").swipe( {
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      if(direction==='left'){
+        $("#myCarousel").carousel("next");
+      }
+      if(direction==='right'){
+        $("#myCarousel").carousel("prev")
+      }
+    }
   });
 });
