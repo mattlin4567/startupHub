@@ -7,6 +7,12 @@ function initIntro(team) {
   team.intro.forEach((element) => {
     $('<p>').text(element).appendTo(description);
   });
+  if (team.product && team.product.length > 0) {
+    $('<h4>').text('產品與服務').appendTo(description);
+    team.product.forEach((element) => {
+      $('<p>').text(element).appendTo(description);
+    });
+  }
   if (team.web) {
     buttonGroup.append(initSocialButton(0, team.web));
   }
@@ -44,7 +50,11 @@ function initImagesCarousel(team, year) {
     }
     var img = `./assets/images/${year}/${index}/carousel${i + 1}.jpg`;
     var item = $('<div>').addClass('item');
-    $('<img>').attr('src', img).css('width', '100%').appendTo(item);
+    $('<img>')
+      .attr('src', img)
+      .attr('onerror', 'this.src="./assets/images/sme.jpg"')
+      .css('width', '100%')
+      .appendTo(item);
     list.append(item);
     $('<li>')
       .attr('data-target', '#myCarousel')

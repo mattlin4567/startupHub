@@ -2,6 +2,18 @@ html {
   font-family: 微軟正黑體, 'Arial Unicode MS';
 }
 
+.carousel-inner > div.item {
+  height: 437px;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+.carousel-inner > div.item > img {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
 .video-container {
   position: relative;
   text-align: center;
