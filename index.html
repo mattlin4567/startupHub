@@ -3,22 +3,31 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <!-- 可移除 -->
         <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script language="javascript" type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap2.3.css" />
+        <!------->
         <script language="javascript" type="text/javascript" src="index.js"></script>
         <script language="javascript" type="text/javascript" src="assets/js/teamsData.js"></script>
         <script language="javascript" type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
         <link rel="stylesheet" type="text/css" href="assets/css/hover_effect.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        <link rel="stylesheet" type="text/css"
-            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
     </head>
 
     <body>
         <img src="./assets/images/top.png" style="width:100%" />
-        <div class="container video-container">
-            <div id="intro-video"></div>
+        <div class="top-bar container">
+            <a id="team-select" class="btn dropdown-toggle" data-toggle="dropdown" href="javascript:;">第二期<span
+                    class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:;" data-value="all">全部團隊</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;" data-value="108">第一期</a></li>
+                <li><a href="javascript:;" data-value="109">第二期</a></li>
+            </ul>
+            <input id="search" type="text" class="input-large search-query" placeholder="請輸入團隊名稱">
         </div>
         <div class="float hidden-xs" style="right: -20vw;">
             <div class="side-menu-title">
@@ -26,6 +35,9 @@
             </div>
             <div class="side-menu">
             </div>
+        </div>
+        <div class="cv-spinner container" style="display: none;">
+            <span class="spinner"></span>
         </div>
         <div class="container" id="team-list">
         </div>

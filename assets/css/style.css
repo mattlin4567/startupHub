@@ -2,21 +2,21 @@ html {
   font-family: 微軟正黑體, 'Arial Unicode MS';
 }
 
-.video-container{
-  position:relative;
+.video-container {
+  position: relative;
   text-align: center;
-  overflow:hidden;
+  overflow: hidden;
   height: 90vh;
 }
-  
+
 .video-container iframe,
 .video-container object,
-.video-container embed{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .card-body > h5 {
@@ -57,7 +57,7 @@ html {
 
 .side-menu {
   width: 20vw;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 
 .side-menu > div {
@@ -70,9 +70,10 @@ html {
   padding: 12px 8px;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  font-size: 2rem;
+  font-size: 1rem;
   max-height: 120px;
   border-radius: 15px 0px 0px 15px;
+  white-space: nowrap;
 }
 
 /* 團隊資料 intro */
@@ -183,7 +184,7 @@ html {
 
 /* 團隊列表 hover 動畫(http://bestjquery.com/tutorial/our-team/demo65/) */
 .our-team {
-  background: #000;
+  background: rgba(255, 255, 255, 1);
   text-align: center;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -196,6 +197,9 @@ html {
   width: 100%;
   height: auto;
   transition: all 0.55s ease 0s;
+}
+.our-team:hover {
+  background: #000;
 }
 .our-team:hover img {
   opacity: 0.5;
@@ -276,23 +280,7 @@ html {
   color: #000;
   text-transform: capitalize;
 }
-@media only screen and (max-width: 992px) {
-  .our-team {
-    margin-bottom: 30px;
-  }
-}
 
-/* style on mobile */
-@media only screen and (max-width: 768px) {
-  .container {
-    margin-top: 8px;
-  }
-
-  .video-container {
-    height: 25vh;
-    margin: 0 15px;
-  }
-}
 .avatar {
   vertical-align: middle;
   width: 50px;
@@ -326,6 +314,71 @@ html {
   align-items: center;
   color: #c0c0c0;
 }
+
+.top-bar {
+  position: relative;
+}
+
+.input-prepend {
+  margin-left: 30px;
+}
+
+.top-bar a {
+  text-decoration: none;
+}
+
+.top-bar > a:focus,
+.top-bar > a:hover {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+
+.top-bar > .btn {
+  cursor: pointer;
+  color: #005580;
+  min-width: 6vw;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.top-bar > .btn .caret {
+  margin-left: 3px !important;
+}
+
+.top-bar > .btn:focus,
+.top-bar > .btn:hover {
+  color: #08c;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+}
+
+/* loading 元件 */
+
+.cv-spinner {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px #ddd solid;
+  border-top: 4px #2e93e6 solid;
+  border-radius: 50%;
+  margin-top: 10vh;
+  animation: sp-anime 0.8s infinite linear;
+}
+@keyframes sp-anime {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* 覆寫 bootstrap */
 
 .carousel-control {
@@ -348,4 +401,37 @@ html {
 .carousel-indicators .active {
   background-color: #444444;
   margin: 0 5px 0 0;
+}
+.nav {
+  margin-left: auto !important;
+}
+
+.nav > li > a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+/* RWD */
+.visible-xs-block {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-top: 8px;
+  }
+
+  .hidden-xs {
+    display: none;
+  }
+
+  .visible-xs-block {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .our-team {
+    margin-bottom: 30px;
+  }
 }
