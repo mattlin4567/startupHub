@@ -45,9 +45,6 @@ function initImagesCarousel(team, year) {
     indicatorIndex++;
   }
   for (var i = 0; i < 2; i++) {
-    if (i === 1 && index == 8) {
-      continue;
-    }
     var img = `./assets/images/${year}/${index}/carousel${i + 1}.jpg`;
     var item = $('<div>').addClass('item');
     $('<img>')
