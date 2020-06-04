@@ -18,7 +18,10 @@ function createSideMenu(data) {
 
 function createMobileList(data, year) {
   var img = `./assets/images/${year}/${data.index}/logo.jpg`;
-  var item = $('<div>').addClass('list-item').attr('data-index', data.index);
+  var item = $('<div>')
+    .addClass('list-item')
+    .attr('data-index', data.index)
+    .attr('data-year', year);
   var avatar = $('<div>').addClass('list-item-avatar');
   $('<img>').addClass('avatar').attr('src', img).appendTo(avatar);
   var content = $('<div>').addClass('list-item-content').text(data.name);
