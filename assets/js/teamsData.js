@@ -194,7 +194,7 @@ const TEAMS = {
       ],
       tags: [0],
       web: '',
-      fb: '',
+      fb: 'https://www.facebook.com/FormosationOralTech/',
     },
     {
       index: 1,
@@ -209,7 +209,7 @@ const TEAMS = {
       ],
       tags: [0],
       web: '',
-      fb: '',
+      fb: 'https://www.facebook.com/WhatSupBest',
     },
     {
       index: 2,
@@ -224,7 +224,8 @@ const TEAMS = {
       ],
       tags: [0],
       web: '',
-      fb: '',
+      fb: 'https://www.facebook.com/ProfoundLifeTW/',
+      ig: 'https://www.instagram.com/profoundlifetw/',
     },
     {
       index: 3,
@@ -238,7 +239,7 @@ const TEAMS = {
       product: [],
       tags: [0],
       web: '',
-      fb: '',
+      fb: 'https://www.facebook.com/betterlife.taiwan/',
     },
     {
       index: 4,
@@ -254,7 +255,7 @@ const TEAMS = {
         '容器化架構與管理，動態分配算力給每支獨立交易機器人，有效降地交易延遲。透過策略競賽排名有效媒合策略與交易者，利用 Split-As-You-Profit 模型和 Smart Contract 達到「先儲值執行策略，後獲利再分潤」，將策略開發者與交易者權益最大化；代幣回饋與交易競賽挖礦機制將利潤與平台上客戶共享，可有效獲客與留客；策略跟投系統與打造進階 AI 投資最佳化組合開發工具則是我們下一階段的里程碑。',
       ],
       tags: [0],
-      web: '',
+      web: 'https://crypto-arsenal.io',
       fb: '',
     },
     {
@@ -262,15 +263,14 @@ const TEAMS = {
       name: '姸禾國際有限公司',
       youtube: '',
       intro: [
-        '我們團體成員多數為海外長久居住回台發展的成員，我們都有一個願景是能貢獻我們在海外的經驗幫助台灣廠商外銷。',
-        '走出在台無限循環的內銷瓶頸，讓世界真正能看的到台灣價值。',
+        '團員多數為長期居住海外，回台灣發展的菁英，我們的共同願景是藉由分享海外經驗，幫助國內廠商打通國際市場！',
       ],
       product: [
         '姸禾提供品牌商或供應商經營外銷所需的線上/實體銷售通路，商品經由試用平台測試後，給予廠商建議。獲選商品提報於實體通路採購及專屬平台。後續追蹤交貨到買家手上，一條龍服務。',
         '另提供線上金流、倉儲管理、海外物流配送，外文翻譯以及到府拍攝。主打台灣品牌，走出OEM代工，讓世界看到台灣！',
       ],
       tags: [0],
-      web: '',
+      web: 'https://blackencore.fr/',
       fb: '',
     },
     {
@@ -309,7 +309,7 @@ const TEAMS = {
         '服務團隊，根據客戶的場域情境評估需求及待解決問題，再藉由場域情境模擬分析設計與研發適合的應用方案，最後整合為整體解決方案服務，藉此快速切入市場與爭取客戶支持。',
       ],
       tags: [0],
-      web: '',
+      web: 'https://www.cornea.com.tw/',
       fb: '',
     },
     {
@@ -330,16 +330,16 @@ const TEAMS = {
         'Facebook粉絲頁(Letron樂點)',
       ],
       tags: [0],
-      web: '',
-      fb: '',
+      web: 'http://letronmusic.com/',
+      fb: 'https://www.facebook.com/Letron.MusicAPP/',
     },
     {
       index: 9,
       name: '織智韻創有限公司',
       youtube: '',
       intro: [
-        'Design your life, delight your world!',
-        '我們期待能幫助更多人，找到屬於他們存在世界的價值，活出無悔人生！',
+        'Inspire Your Passion and Help You Take Action!',
+        '我們是一間支持更多人找到人生方向，實踐自我價值的教育企業！',
       ],
       product: [
         'LIFE DESIGNER從15年第一線實務教育經驗出發，已引導超過120位年輕人為自己的人生做出行動與改變，並針對多數年輕人常面臨到的問題，於2019年底出版成《出發！成為我們期待的大人-給年輕人的30個關鍵字》一書。',
@@ -361,7 +361,7 @@ const TEAMS = {
         '宗教科技文創網路商城以宗教文化為主軸，結合宗教科技文創，發展一系列商品，加上台灣既有之供品文化，結合相關宗教節慶行事曆，打造台灣特有的宗教科技文創網路商城。',
       ],
       tags: [0],
-      web: '',
+      web: 'https://tomioshi.com/',
       fb: '',
     },
     {
@@ -380,7 +380,7 @@ const TEAMS = {
       ],
       tags: [0],
       web: '',
-      fb: '',
+      fb: 'https://www.facebook.com/hoyidancecrew/',
     },
     {
       index: 12,
@@ -398,7 +398,7 @@ const TEAMS = {
       ],
       tags: [1],
       web: '',
-      fb: '',
+      fb: 'https://www.facebook.com/Craftsmanship.Insights/',
     },
     {
       index: 13,
@@ -411,8 +411,8 @@ const TEAMS = {
         '整合創業所需辦公空間、創業家簽證、產業導師、專業智財、法律諮詢輔導，提供落地所需的一站式服務，解決國際團隊在台創業的痛點。至今已入選30+組團隊，包括印度、新加坡、泰國、越南、馬來西亞。',
       ],
       tags: [1],
-      web: '',
-      fb: '',
+      web: 'https://startboard.co/',
+      fb: 'https://www.facebook.com/STARTBOARD.co',
     },
     {
       index: 14,
@@ -423,7 +423,7 @@ const TEAMS = {
       ],
       product: [],
       tags: [1],
-      web: '',
+      web: 'https://aiacademy.tw/alumni-association-introduction/',
       fb: '',
     },
   ],

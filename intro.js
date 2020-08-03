@@ -19,9 +19,13 @@ function initIntro(team) {
   if (team.fb) {
     buttonGroup.append(initSocialButton(1, team.fb));
   }
+  if (team.ig) {
+    buttonGroup.append(initSocialButton(2, team.ig));
+  }
 }
 function initSocialButton(type, url) {
-  var icon = type ? 'fa fa-facebook' : 'fa fa-globe';
+  var icon =
+    type == 2 ? 'fa fa-instagram' : type ? 'fa fa-facebook' : 'fa fa-globe';
   var btn = $('<button>').attr('type', 'button').addClass('btn');
   $('<i>').addClass(icon).appendTo(btn);
   btn.bind('click', function () {
