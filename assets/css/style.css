@@ -431,6 +431,7 @@ html {
 @media only screen and (max-width: 768px) {
   .container {
     margin-top: 8px;
+    width: unset !important;
   }
 
   .hidden-xs {
