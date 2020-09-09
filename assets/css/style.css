@@ -8,27 +8,24 @@ html {
   border-radius: 3px;
 }
 
-.carousel-inner > div.item > img {
+.carousel-inner > div.item > * {
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
 }
 
 .video-container {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  height: 90vh;
-}
+  position: relative !important;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+} 
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .card-body > h5 {
@@ -89,6 +86,11 @@ html {
 }
 
 /* 團隊資料 intro */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .project_description,
 .project_details {
@@ -402,7 +404,13 @@ html {
 }
 
 .carousel-indicators {
-  bottom: -35px !important;
+  top: unset !important;
+  right: unset !important;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .carousel-indicators li {
@@ -412,7 +420,6 @@ html {
 
 .carousel-indicators .active {
   background-color: #444444;
-  margin: 0 5px 0 0;
 }
 .nav {
   margin-left: auto !important;

@@ -38,10 +38,12 @@ function initImagesCarousel(team, year) {
   var indicator = $('.carousel-indicators');
   var indicatorIndex = 0;
   var index = team.index;
-
+  
+  
   if (team.youtube) {
     var item = $('<div>').addClass('item').appendTo(list);
-    $('<div>').attr('id', 'player').appendTo(item);
+    var container = $('<div>').addClass('video-container').appendTo(item);
+    $('<div>').attr('id', 'player').appendTo(container);
     $('<li>')
       .attr('data-target', '#myCarousel')
       .attr('data-slide-to', indicatorIndex)
@@ -49,14 +51,13 @@ function initImagesCarousel(team, year) {
     indicatorIndex++;
   }
   for (var i = 0; i < 2; i++) {
+    var item = $('<div>').addClass('item').appendTo(list);
     var img = `./assets/images/${year}/${index}/carousel${i + 1}.jpg`;
-    var item = $('<div>').addClass('item');
     $('<img>')
       .attr('src', img)
       .attr('onerror', 'this.src="./assets/images/sme.jpg"')
       .css('width', '100%')
       .appendTo(item);
-    list.append(item);
     $('<li>')
       .attr('data-target', '#myCarousel')
       .attr('data-slide-to', indicatorIndex)
@@ -98,16 +99,14 @@ function onPlayerStateChange(event) {
 }
 
 function onYouTubeIframeAPIReady() {
-  var height = '437';
-  var width = '750';
-  if (/Mobi|Android/i.test(navigator.userAgent)) {
-    height = '201';
-    width = '345';
-  }
+  // var height = '437';
+  // var width = '750';
+  // if (/Mobi|Android/i.test(navigator.userAgent)) {
+  //   height = '201';
+  //   width = '345';
+  // }
   player = new YT.Player('player', {
     videoId: TEAMS[getTeamYear()][getTeamIndex()].youtube,
-    height: height,
-    width: width,
     events: {
       onStateChange: onPlayerStateChange,
     },
