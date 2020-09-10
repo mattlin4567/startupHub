@@ -3,7 +3,7 @@ html {
 }
 
 .carousel-inner > div.item {
-  height: 437px;
+  height: 100%;
   background-color: #ffffff;
   border-radius: 3px;
 }
@@ -12,6 +12,11 @@ html {
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
+}
+
+.carousel-inner > div.item > img {
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .video-container {
@@ -103,6 +108,10 @@ html {
 
 .project_details {
   border-top: 1px solid #e2e2e2;
+}
+
+.dividerHeading {
+  width: 100%;
 }
 
 .dividerHeading h4,
@@ -406,7 +415,7 @@ html {
 .carousel-indicators {
   top: unset !important;
   right: unset !important;
-  bottom: 0;
+  bottom: -20px;
   padding: 0;
   width: 100%;
   display: flex;
@@ -431,8 +440,11 @@ html {
 }
 
 /* RWD */
-.visible-xs-block {
-  display: none;
+
+@media only screen and (min-width: 768px)  { 
+  .intro-content > div:first-child {
+    margin-top: 16px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -440,13 +452,9 @@ html {
     margin-top: 8px;
     width: unset !important;
   }
-
-  .hidden-xs {
-    display: none;
-  }
-
-  .visible-xs-block {
-    display: block;
+  
+  [class*="span"], .row {
+    margin: 0 !important;
   }
 }
 

@@ -121,6 +121,10 @@ function getTeamYear() {
 $(document).ready(function () {
   var teamIndex = getTeamIndex();
   var teamYear = getTeamYear();
+  console.info($( window ).width());
+
+  var carouselInner = $('.carousel-inner');
+  carouselInner.height(Math.ceil($(carouselInner).width() / 16 * 9));
   var data = TEAMS[teamYear];
   initIntro(data[teamIndex]);
   initImagesCarousel(data[teamIndex], teamYear);
