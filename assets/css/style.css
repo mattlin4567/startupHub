@@ -440,6 +440,9 @@ html {
 }
 
 /* RWD */
+.visible-xs-block {
+  display: none;
+}
 
 @media only screen and (min-width: 768px)  { 
   .intro-content > div:first-child {
@@ -455,6 +458,14 @@ html {
   
   [class*="span"], .row {
     margin: 0 !important;
+  }
+
+  .hidden-xs {
+    display: none;
+  }
+
+  .visible-xs-block {
+    display: block;
   }
 }
 

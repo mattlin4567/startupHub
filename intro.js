@@ -38,8 +38,8 @@ function initImagesCarousel(team, year) {
   var indicator = $('.carousel-indicators');
   var indicatorIndex = 0;
   var index = team.index;
-  
-  
+
+
   if (team.youtube) {
     var item = $('<div>').addClass('item').appendTo(list);
     var container = $('<div>').addClass('video-container').appendTo(item);
@@ -99,12 +99,6 @@ function onPlayerStateChange(event) {
 }
 
 function onYouTubeIframeAPIReady() {
-  // var height = '437';
-  // var width = '750';
-  // if (/Mobi|Android/i.test(navigator.userAgent)) {
-  //   height = '201';
-  //   width = '345';
-  // }
   player = new YT.Player('player', {
     videoId: TEAMS[getTeamYear()][getTeamIndex()].youtube,
     events: {
@@ -121,7 +115,7 @@ function getTeamYear() {
 $(document).ready(function () {
   var teamIndex = getTeamIndex();
   var teamYear = getTeamYear();
-  console.info($( window ).width());
+  console.info($(window).width());
 
   var carouselInner = $('.carousel-inner');
   carouselInner.height(Math.ceil($(carouselInner).width() / 16 * 9));
