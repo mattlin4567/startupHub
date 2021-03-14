@@ -439,6 +439,22 @@ html {
   text-decoration: none;
 }
 
+/* Youtube 影片 */ 
+.video {
+  position: relative !important;
+  padding-bottom: 56.25% !important;
+  margin-bottom: 30px;
+  height: 0;
+} 
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* RWD */
 .visible-xs-block {
   display: none;

@@ -64,12 +64,30 @@ function navgation() {
   window.location = `./intro.html?team=${team}&year=${year}`;
 }
 
-$(document).ready(function () {
-  var TOTALYEAR = ['108', '109'];
-  var selectedTeam = ['109'];
+function loadYouTube(year) {
+  if (YOUTUBE[year]) {
+    var list = $('#team-list');
+    var video = $('<div>').addClass('video');
+    $('<div>').attr('id', 'player').appendTo(video);
+    list.append(video);
+    player = new YT.Player('player', {
+      videoId: YOUTUBE[year],
+    });
+  }
+}
+
+// 確保影片會事先載入
+function onYouTubeIframeAPIReady() {
+  loadYouTube('109');
   if (selectedTeam.length > 0) {
     initPage(selectedTeam);
   }
+}
+
+var selectedTeam = ['109'];
+
+$(document).ready(function () {
+  var TOTALYEAR = ['108', '109'];
   $('.float').hover(
     function () {
       $(this).stop().animate({ right: '0' }, 'medium');
@@ -92,6 +110,10 @@ $(document).ready(function () {
     selectedTeam = selection === 'all' ? TOTALYEAR : [selection];
 
     setTimeout(() => {
+
+      if (YT.loaded) {
+        loadYouTube(selectedTeam);
+      }
       initPage(selectedTeam);
     }, 500);
   });
