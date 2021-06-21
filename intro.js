@@ -22,14 +22,32 @@ function initIntro(team) {
   if (team.ig) {
     buttonGroup.append(initSocialButton(2, team.ig));
   }
+  if (team.podcast) {
+    buttonGroup.append(initSocialButton(3, team.podcast));
+  }
 }
 function initSocialButton(type, url) {
-  var icon =
-    type == 2 ? 'fa fa-instagram' : type ? 'fa fa-facebook' : 'fa fa-globe';
+  var icon = '';
+  switch (type) {
+    case 0:
+      icon = 'fa fa-globe';
+      break;
+    case 1:
+      icon = 'fa fa-facebook';
+      break;
+    case 2:
+      icon = 'fa fa-instagram';
+      break;
+    case 3:
+      icon = 'fa fa-bullhorn';
+      break;
+    default:
+      return;
+  }
   var btn = $('<button>').attr('type', 'button').addClass('btn');
   $('<i>').addClass(icon).appendTo(btn);
   btn.bind('click', function () {
-    window.location = url;
+    window.open(url, '_blank').focus();
   });
   return btn;
 }
@@ -115,7 +133,6 @@ function getTeamYear() {
 $(document).ready(function () {
   var teamIndex = getTeamIndex();
   var teamYear = getTeamYear();
-  console.info($(window).width());
 
   var carouselInner = $('.carousel-inner');
   carouselInner.height(Math.ceil($(carouselInner).width() / 16 * 9));

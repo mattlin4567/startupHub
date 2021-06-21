@@ -34,6 +34,7 @@ function createMobileList(data, year) {
 }
 
 function initPage(years) {
+  console.log("initPage: ", years);
   var list = $('#team-list');
   var sideMenu = $('.side-menu');
   var row = $('<div>').addClass('row form-group hidden-xs');
@@ -78,16 +79,16 @@ function loadYouTube(year) {
 
 // 確保影片會事先載入
 function onYouTubeIframeAPIReady() {
-  loadYouTube('109');
+  // loadYouTube('110');
   if (selectedTeam.length > 0) {
     initPage(selectedTeam);
   }
 }
 
-var selectedTeam = ['109'];
+var selectedTeam = ['110'];
 
 $(document).ready(function () {
-  var TOTALYEAR = ['108', '109'];
+  var TOTALYEAR = ['108', '109', '110'];
   $('.float').hover(
     function () {
       $(this).stop().animate({ right: '0' }, 'medium');
