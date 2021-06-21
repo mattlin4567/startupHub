@@ -47,7 +47,7 @@ function initSocialButton(type, url) {
   var btn = $('<button>').attr('type', 'button').addClass('btn');
   $('<i>').addClass(icon).appendTo(btn);
   btn.bind('click', function () {
-    window.location = url;
+    window.open(url, '_blank').focus();
   });
   return btn;
 }
