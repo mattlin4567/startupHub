@@ -125,6 +125,14 @@ html {
   text-transform: uppercase;
 }
 
+.widget_title h4 {
+  display: flex;
+}
+
+.widget_title span {
+  flex: 1;
+}
+
 .project_details .details li {
   border-bottom: 1px solid #f2f2f2;
   color: #a3a3a3;
@@ -160,7 +168,6 @@ html {
 }
 
 .btn-links {
-  position: absolute;
   right: 0px;
   bottom: 1px;
 }
