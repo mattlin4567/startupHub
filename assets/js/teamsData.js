@@ -326,7 +326,7 @@ const TEAMS = {
       product: [
         '採用音樂積木式的創作方式(APP)，避開目前AI音樂技術瓶頸，可以創作出千萬首好歌。',
         'Google Play可下載試用版,目前只有Android版 (請輸入「樂點」或「Letron」)',
-        '創作與後製介紹請看demo video https://youtu.be/hhTo1uhJbKw',
+        '創作與後製介紹請看demo video hhTo1uhJbKw',
         'Facebook粉絲頁(Letron樂點)',
       ],
       tags: [0],
@@ -431,7 +431,7 @@ const TEAMS = {
     {
       index: 0,
       name: '哈彼科技股份有限公司',
-      youtube: 'https://youtu.be/CwiLT0Edr5U',
+      youtube: 'CwiLT0Edr5U',
       intro: [
         'HAVFIT團隊創業旨在提升國人更好的生活型態，專注於行銷、策略、與新媒體整合，透過團隊成員的組成背景與市場趨勢，初期以媒體商模快速進入市場、佈局，利用「內容電商」優勢呈現募資影音、線上數位課程，並建立「全台健身運動媒體線上課程平台」，以優質的內容編輯企 劃，打破每個人對於健身運動文化裡的傳統框架，持續挑戰自我，創造更好的 自己。Enjoy Challenges, Empower Yourself.',
       ],
@@ -453,7 +453,7 @@ const TEAMS = {
     {
       index: 1,
       name: '拉拜股份有限公司',
-      youtube: 'https://youtu.be/8E5Z561S5yw',
+      youtube: '8E5Z561S5yw',
       intro: [
         'TryBuy 社群商務是網紅銷售媒合數位平臺，協助品牌商、代理商、零售商，透過網紅拓展線上銷售通路，並可透過平臺數據分析智慧化協助分析匹配度，快速提高媒合效率。',
       ],
@@ -484,7 +484,7 @@ const TEAMS = {
     {
       index: 3,
       name: '台灣碳材有限公司',
-      youtube: 'https://youtu.be/pHwGAyMjoJE',
+      youtube: 'pHwGAyMjoJE',
       intro: [
         '台灣碳材技術團隊具有優異的發明創新能力，保持公司技術的不斷領先和應用產品不斷研發。技術團隊累積多年於碳材料領域之材料開發、生產以及產品應用之經驗，提供優質且具競爭力之產品，提供客戶最佳解決方案。',
       ],
@@ -499,7 +499,7 @@ const TEAMS = {
     {
       index: 4,
       name: '享廚好食有限公司',
-      youtube: 'https://youtu.be/YwUNyZpmS4I',
+      youtube: 'YwUNyZpmS4I',
       intro: [
         '享廚好食(Fresh Recipe)提供新鮮的實體食譜，運用美好的原型食材，讓每個家庭輕鬆享受廚藝的樂趣。',
       ],
@@ -515,7 +515,7 @@ const TEAMS = {
     {
       index: 5,
       name: '島島有限公司',
-      youtube: 'https://youtu.be/it7l3oimLts',
+      youtube: 'it7l3oimLts',
       intro: [
         '島島是一個結合專業的系統開發經驗、豐富的人文歷史知識並熟稔兒童學習認知行為的團隊，我們相信每個人都是一座島嶼，島與島都保有自己的個性，並與他人連結，進而帶來無窮大的力量，我們希望提供孩子好的學習環境，讓孩子在島嶼間盡情的飛翔探索，發現自己的夢想。',
       ],
@@ -532,7 +532,7 @@ const TEAMS = {
     {
       index: 6,
       name: '為烽科技有限公司',
-      youtube: 'https://youtu.be/SMCFdT6p-8w',
+      youtube: 'SMCFdT6p-8w',
       intro: [
         '根據研究發現，高達 90% 的機械錶主沒有能力判斷手錶機芯的狀況；我們用儀表板和里程數來判斷愛車是否保養，那機械錶呢？',
         'TECH&WATCH由一群喜歡機械錶的夥伴組成，我們相信科技進步不會削弱機械錶的價值，反而可以讓愛錶得到更好的照顧！',
@@ -549,7 +549,7 @@ const TEAMS = {
     {
       index: 7,
       name: '啟夢股份有限公司',
-      youtube: 'https://youtu.be/CL9wTp-EUrI',
+      youtube: 'CL9wTp-EUrI',
       intro: [
         '啟夢致力於協助高中生探索大學科系，解決學生迷惘的問題。啟夢創辦人許匡毅在高中時曾經化學很好，以為適合讀化學系，沒想到進入大學後，才發現化學系不適合自己，選錯科系。「因為曾經經歷選錯系的痛苦，我希望解決台灣高中生迷惘，選錯科系的問題。」因此，在與專家討論後，開發獨家的「系統化」探索科系方法：求廣、求深、求透，利用十四項探索任務、地毯式介紹科系類別、達人見面、科系體驗活動、教材體驗、閱讀入門書等方式，協助學生經歷完整探索科系的過程，釐清適合自己的科系方向。',
       ],
@@ -569,7 +569,7 @@ const TEAMS = {
     {
       index: 8,
       name: '婕崴服飾有限公司',
-      youtube: 'https://youtu.be/Rxy4ZBluyjk',
+      youtube: 'Rxy4ZBluyjk',
       intro: [
         'Just Achieve eXcellence',
         '追求卓越，取得非凡',
@@ -589,7 +589,7 @@ const TEAMS = {
     {
       index: 9,
       name: '智運國際科技股份有限公司',
-      youtube: 'https://youtu.be/bZ6OerrpTxo',
+      youtube: 'bZ6OerrpTxo',
       intro: [
         '智運國際科技股份有限公司致力於交通運輸相關的服務項目，除了需要具備相關技術，團隊也加入適合的人才，為服務項目注入生命力。孫以濬董事長已有38年豐富的交通領域實務經驗，延攬張雍銘執行長將行銷和經營管理的經驗帶領新創團隊讓資源都最大的應用。',
       ],
@@ -605,7 +605,7 @@ const TEAMS = {
     {
       index: 10,
       name: '數位身分股份有限公司',
-      youtube: 'https://youtu.be/LWtN0NZdUbY',
+      youtube: 'LWtN0NZdUbY',
       intro: [
         'AuthMe由白帽駭客、連續創業家所組成，致力於打造更安全、更有效率、更準確的身分認證解決方案。',
       ],
@@ -620,7 +620,7 @@ const TEAMS = {
     {
       index: 11,
       name: '樂沃天創意股份有限公司',
-      youtube: 'https://youtu.be/HgcPaiwY_Hy',
+      youtube: 'HgcPaiwY_Hy',
       intro: [
         '因為聲音無所不在也無可避免。 Level 10將音響設計結合生活，透過電聲量測及模組化設計，創造新產品的同時更希望減少一次性的模具開立，在創造與節約之間取得最大的平衡。',
         'Level 10團隊將產品構想至交付顧客手中，平均只花了6個月的時間，這除了背後有強大的工程能力之外，最重要的是團隊有許多的良好關係，在資源整合上取得快速的回饋，透過時下最熱門且最重要的募資平台及社群媒體行銷，不斷地跨界舉辦試聽活動，將好聲音真正的與生活結合！',
@@ -636,7 +636,7 @@ const TEAMS = {
     {
       index: 12,
       name: '澔心科技股份有限公司',
-      youtube: 'https://youtu.be/tRY59kj8qqg',
+      youtube: 'tRY59kj8qqg',
       intro: [
         '澔心科技創辦人蔡富吉，累積十多年的豐富生理感測科技開發經驗，有感居家健康管理之必要，創立澔心科技完善「全年齡智慧居家健康生態系」。將具有臨床意義的生理感測微型化，透過穿戴式物聯網裝置帶入家中，並提供使用者健康數據雲端平台作為精準健康之基石。',
       ],
@@ -651,7 +651,7 @@ const TEAMS = {
     {
       index: 13,
       name: '螞蟻帝國企業有限公司',
-      youtube: 'https://youtu.be/OV52C0m_P5k',
+      youtube: 'OV52C0m_P5k',
       intro: [
         '螞蟻帝國深信螞蟻會是改變世界的重要關鍵，致力讓螞蟻成為我們生活中真正不可或缺的一份子，因此積極的與各領域進行異業合作，找出幫助改善人們與大自然的任何可能性，達到如同螞蟻團結合作結果。',
       ],
@@ -666,7 +666,7 @@ const TEAMS = {
     {
       index: 14,
       name: '貓特藍提斯有限公司',
-      youtube: 'https://youtu.be/x0kF7BSBvIc',
+      youtube: 'x0kF7BSBvIc',
       intro: [
         '由一群喜愛貓狗或是想守護可愛毛朋友的團隊組成，有研發能力、食品科學專業、熱情敬業、聽見寵物的需求，透過美毛乾洗粉、AI吸毛器等產品，並持續完善寵物與主人間的服務，解決困擾，搭起寵物來到我們生命中的意義橋樑。',
       ],
@@ -684,7 +684,7 @@ const TEAMS = {
     {
       index: 15,
       name: '躍嵐國際有限公司',
-      youtube: 'https://youtu.be/HasIM2cbL1Y',
+      youtube: 'HasIM2cbL1Y',
       intro: [
         '我們是熱愛大自然的戶外人， Outrange是我們「突破框架」的精神，箭頭象徵著走向戶外，也象徵著前進的驅動力，我們正在研發使用友善自然的永續原料製造商品，藉由產品散播與大自然永續共存的精神。',
       ],
