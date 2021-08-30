@@ -79,7 +79,7 @@ function loadYouTube(year) {
 
 // 確保影片會事先載入
 function onYouTubeIframeAPIReady() {
-  // loadYouTube('110');
+  loadYouTube('110');
   if (selectedTeam.length > 0) {
     initPage(selectedTeam);
   }

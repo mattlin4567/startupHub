@@ -665,7 +665,7 @@ const TEAMS = {
     },
     {
       index: 14,
-      name: '貓特藍提斯有限公司',
+      name: '貓特藍提斯',
       youtube: 'x0kF7BSBvIc',
       intro: [
         '由一群喜愛貓狗或是想守護可愛毛朋友的團隊組成，有研發能力、食品科學專業、熱情敬業、聽見寵物的需求，透過美毛乾洗粉、AI吸毛器等產品，並持續完善寵物與主人間的服務，解決困擾，搭起寵物來到我們生命中的意義橋樑。',
@@ -702,7 +702,8 @@ const TEAMS = {
 
 const YOUTUBE = {
   '108': 'x_i4zpmGuRc',
-  '109': 'Ph_aMWbsJP4'
+  '109': 'Ph_aMWbsJP4',
+  '110': '4PsyR7BIDAc'
 }
 
 const TAGS = ['新創團隊', '社群聚落'];
