@@ -702,7 +702,7 @@ const TEAMS = {
     {
       index: 0,
       name: 'Cocoon內衣革命',
-      youtube: 'Y2ABqgYtnPw',
+      youtube: 'IldjM_yQYaw',
       intro: [
         'Cocoon內衣革命是專注亞裔女性的數位內衣量身和購買平台。因為了解亞裔購買內衣的困難，Cocoon從頭開始打造屬於我們的劃時代內衣平台，陪同這個世代的內衣著用者重新定義內衣的意義和功能。',
         'Cocoon內衣革命核心目標是「打破常規、創造滿足多元需求的內衣平台」。我們相信不論年紀、尺寸、性別認同、性向，只要有內衣的需求，就應該被考量進產品設計和購物的過程，我們陪同內衣著用者更了解自己的內衣需求並提供多元的選擇。',
@@ -720,7 +720,7 @@ const TEAMS = {
     {
       index: 1,
       name: 'NFT Bottler加密裝瓶廠',
-      youtube: 'wWvf_47BVD8',
+      youtube: 'DAav8_PI7yk',
       intro: [
         'NFT Bottler 整合區塊鏈與供應鏈技術，讓酒品產業的投資更加簡單與無國界，並讓台灣在地精釀烈酒品牌走向國際。',
       ],
@@ -733,7 +733,7 @@ const TEAMS = {
     {
       index: 2,
       name: '大話中文有限公司',
-      youtube: 'Y7wqp39ai4U',
+      youtube: '4G0xbqimd5Q',
       intro: [
         '大話中文為華語成人學習者提供一個最自由、有深度的補充材料平台，讓成人學習者用興趣帶動學習，推廣中文和華人文化。',
       ],
