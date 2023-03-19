@@ -136,10 +136,10 @@ function initSpContent(team, year) {
   $('<img>')
     .attr('src', `./assets/images/${year}/${index}/cover.jpg`)
     .attr('onerror', 'this.src="./assets/images/sme.jpg"')
-    .css('width', '100%')
+    .css('max-width', '100%')
     .css('max-height', '500px')
     .css('object-fit', 'cover')
-    .appendTo(cover);
+    .appendTo($('.cover'));
   $('<p>')
     .text(`圖片來源：由${team.name}提供`)
     .css('float', 'right')
@@ -161,7 +161,7 @@ function initSpContent(team, year) {
         .attr('src', `./assets/images/${year}/${index}/team_photo_${i+1}.jpg`)
         .attr('onerror', 'this.src="./assets/images/sme.jpg"')
         .css('margin-top', '16px')
-        .css('width', '100%')
+        .css('max-width', '100%')
         .css('max-height', '500px')
         .css('object-fit', 'cover')
         .appendTo(block);
