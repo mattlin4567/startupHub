@@ -130,16 +130,88 @@ function getTeamYear() {
   return results !== null ? results[1] || 0 : false;
 }
 
+function initSpContent(team, year) {
+  var index = team.index;
+  var cover = $('.cover-photo');
+  $('<img>')
+    .attr('src', `./assets/images/${year}/${index}/cover.jpg`)
+    .attr('onerror', 'this.src="./assets/images/sme.jpg"')
+    .css('width', '100%')
+    .css('max-height', '500px')
+    .css('object-fit', 'cover')
+    .appendTo(cover);
+  $('<p>')
+    .text(`圖片來源：由${team.name}提供`)
+    .css('float', 'right')
+    .css('color', '#787878')
+    .appendTo(cover);
+  var intro = $('.intro');
+  $('<div>').text(`團隊名稱：${team.name}`).appendTo(intro);
+  $('<div>').text(`產品服務：${team.product}`).appendTo(intro);
+  $('<div>').text(`發展階段：${team.stage}`).appendTo(intro);
+  $('<div>').text(`登記時間：${team.found}`).appendTo(intro);
+  $('<div>').text(`募資階段：${team.funding}`).appendTo(intro);
+  intro.addClass('label-text');
+  var detail = $('.detail');
+  team.section.forEach((text, i) => {
+    var block = $('<div>').css('margin-top', '24px').css('text-align', 'center').appendTo(detail);
+    $('<div>').css('text-align', 'left').html(text).appendTo(block);
+    if(i<2){
+      $('<img>')
+        .attr('src', `./assets/images/${year}/${index}/team_photo_${i+1}.jpg`)
+        .attr('onerror', 'this.src="./assets/images/sme.jpg"')
+        .css('margin-top', '16px')
+        .css('width', '100%')
+        .css('max-height', '500px')
+        .css('object-fit', 'cover')
+        .appendTo(block);
+    }
+  });
+  var remark = $('.remark').addClass('label-text');;
+  $('<div>').text(`官方網站：${team.web}`).appendTo(remark);
+  $('<div>').text(`徵求資源：${team.resource}`).appendTo(remark);
+}
+
 $(document).ready(function () {
   var teamIndex = getTeamIndex();
   var teamYear = getTeamYear();
-
   var carouselInner = $('.carousel-inner');
   carouselInner.height(Math.ceil($(carouselInner).width() / 16 * 9));
   var data = TEAMS[teamYear];
-  initIntro(data[teamIndex]);
-  initImagesCarousel(data[teamIndex], teamYear);
-  initTeamsCarousel(data, teamYear);
+  if(teamYear==='112') {
+    $('.intro-content').hide();
+    initSpContent(data[teamIndex], teamYear);
+  } else {
+    $('#sp-content').hide();
+    initIntro(data[teamIndex]);
+    initImagesCarousel(data[teamIndex], teamYear);
+    initTeamsCarousel(data, teamYear);
+    $('#myCarousel').on('slide.bs.carousel', function () {
+      if ($('#player').length) {
+        player.stopVideo();
+      }
+    });
+  
+    $('#myCarousel').swipe({
+      //Generic swipe handler for all directions
+      swipe: function (
+        event,
+        direction,
+        distance,
+        duration,
+        fingerCount,
+        fingerData
+      ) {
+        if (direction === 'left') {
+          $('#myCarousel').carousel('next');
+        }
+        if (direction === 'right') {
+          $('#myCarousel').carousel('prev');
+        }
+      },
+    });
+  }
+
   $('.owl-carousel').owlCarousel({
     startPosition: teamIndex,
     loop: true,
@@ -158,36 +230,11 @@ $(document).ready(function () {
         items: 5,
       },
     },
-  });
+  });  
 
   $('div.thumbnail').click(function () {
     var team = $(this).attr('data-index');
     var year = $(this).attr('data-year');
     window.location = `./intro.html?team=${team}&year=${year}`;
-  });
-
-  $('#myCarousel').on('slide.bs.carousel', function () {
-    if ($('#player').length) {
-      player.stopVideo();
-    }
-  });
-
-  $('#myCarousel').swipe({
-    //Generic swipe handler for all directions
-    swipe: function (
-      event,
-      direction,
-      distance,
-      duration,
-      fingerCount,
-      fingerData
-    ) {
-      if (direction === 'left') {
-        $('#myCarousel').carousel('next');
-      }
-      if (direction === 'right') {
-        $('#myCarousel').carousel('prev');
-      }
-    },
   });
 });

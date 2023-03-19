@@ -180,6 +180,12 @@ html {
   background-color: transparent;
 }
 
+.label-text {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
 /* owl-carousel 客製化 */
 
 .owl-item > img {
