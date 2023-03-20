@@ -1105,7 +1105,7 @@ const TEAMS = {
     },
     {
       index: 10,
-      name: '無條件科技股份有限公司（ALT Legal Tech, Inc.）',
+      name: '無條件科技股份有限公司',
       product: '法律服務軟體',
       stage: '新創企業',
       found: '110年11月18日',
@@ -1177,7 +1177,7 @@ const TEAMS = {
     },
     {
       index: 14,
-      name: '寵聯網科技股份有限公司（iFlubby Inc.）',
+      name: '寵聯網科技股份有限公司',
       product: '飼主端｜寵物友善資訊整合 APP；店家端｜寵物服務實體店家 CRM',
       stage: '新創企業',
       found: '109年8月26日',
