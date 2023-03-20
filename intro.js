@@ -136,7 +136,7 @@ function initSpContent(team, year) {
   $('<img>')
     .attr('src', `./assets/images/${year}/${index}/cover.jpg`)
     .attr('onerror', 'this.src="./assets/images/sme.jpg"')
-    .css('max-width', '100%')
+    .css('width', '100%')
     .css('max-height', '500px')
     .css('object-fit', 'cover')
     .appendTo($('.cover'));
@@ -154,21 +154,30 @@ function initSpContent(team, year) {
   intro.addClass('label-text');
   var detail = $('.detail');
   team.section.forEach((text, i) => {
-    var block = $('<div>').css('margin-top', '24px').css('text-align', 'center').appendTo(detail);
-    $('<div>').css('text-align', 'left').html(text).appendTo(block);
+    var block = $('<div>')
+      .css('margin-top', '24px')
+      .css('text-align', 'center')
+      .appendTo(detail);
+    $('<div>')
+      .css('text-align', 'left')
+      .css('line-height', '35px')
+      .css('font-size', '1.2rem')
+      .html(text)
+      .appendTo(block);
     if(i<2){
       $('<img>')
         .attr('src', `./assets/images/${year}/${index}/team_photo_${i+1}.jpg`)
         .attr('onerror', 'this.src="./assets/images/sme.jpg"')
         .css('margin-top', '16px')
-        .css('max-width', '100%')
+        .css('width', '100%')
         .css('max-height', '500px')
         .css('object-fit', 'cover')
         .appendTo(block);
     }
   });
-  var remark = $('.remark').addClass('label-text');;
-  $('<div>').text(`官方網站：${team.web}`).appendTo(remark);
+  var remark = $('.remark').addClass('label-text');
+  var link = $('<div>').text(`官方網站：`).appendTo(remark);
+  $('<a>').attr('href', team.web).text(team.web).appendTo(link);
   $('<div>').text(`徵求資源：${team.resource}`).appendTo(remark);
 }
 
@@ -185,7 +194,6 @@ $(document).ready(function () {
     $('#sp-content').hide();
     initIntro(data[teamIndex]);
     initImagesCarousel(data[teamIndex], teamYear);
-    initTeamsCarousel(data, teamYear);
     $('#myCarousel').on('slide.bs.carousel', function () {
       if ($('#player').length) {
         player.stopVideo();
@@ -211,6 +219,7 @@ $(document).ready(function () {
       },
     });
   }
+  initTeamsCarousel(data, teamYear);
 
   $('.owl-carousel').owlCarousel({
     startPosition: teamIndex,
