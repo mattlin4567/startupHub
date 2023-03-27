@@ -153,6 +153,8 @@ function initSpContent(team, year) {
   $('<div>').text(`募資階段：${team.funding}`).appendTo(intro);
   intro.addClass('label-text');
   var detail = $('.detail');
+  console.log(team)
+  var imgs = 'imgs' in team ? team.imgs :  2
   team.section.forEach((text, i) => {
     var block = $('<div>')
       .css('margin-top', '24px')
@@ -164,7 +166,7 @@ function initSpContent(team, year) {
       .css('font-size', '1.2rem')
       .html(text)
       .appendTo(block);
-    if(i<2){
+    if(i<imgs){
       $('<img>')
         .attr('src', `./assets/images/${year}/${index}/team_photo_${i+1}.jpg`)
         .attr('onerror', 'this.src="./assets/images/sme.jpg"')
@@ -177,8 +179,12 @@ function initSpContent(team, year) {
   });
   var remark = $('.remark').addClass('label-text');
   var link = $('<div>').text(`官方網站：`).appendTo(remark);
-  $('<a>').attr('href', team.web).text(team.web).appendTo(link);
-  $('<div>').text(`徵求資源：${team.resource}`).appendTo(remark);
+  if(team.web) {
+    $('<a>').attr('href', team.web).text(team.web).appendTo(link);
+  } else {
+    $('<span>').text("建置中").appendTo(link);
+  }
+  $('<div>').css({display: 'flex'}).html(`<div style='white-space: nowrap;'>徵求資源：</div><div>${team.resource}</div>`).appendTo(remark);
 }
 
 $(document).ready(function () {
