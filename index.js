@@ -34,7 +34,6 @@ function createMobileList(data, year) {
 }
 
 function initPage(years) {
-  console.log("initPage: ", years);
   var list = $('#team-list');
   var sideMenu = $('.side-menu');
   var row = $('<div>').addClass('row form-group hidden-xs');
@@ -79,7 +78,7 @@ function loadYouTube(year) {
 
 // 確保影片會事先載入
 function onYouTubeIframeAPIReady() {
-  // loadYouTube('110');
+  loadYouTube('112');
   if (selectedTeam.length > 0) {
     initPage(selectedTeam);
   }

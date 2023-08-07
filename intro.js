@@ -132,6 +132,11 @@ function getTeamYear() {
 
 function initSpContent(team, year) {
   var index = team.index;
+  if(team.youtube.length>0) {
+    var vid = $('#sp-content-vid')
+    vid.addClass('video')
+    $('<div>').attr('id', 'player').appendTo(vid);
+  }
   var cover = $('.cover-photo');
   $('<img>')
     .attr('src', `./assets/images/${year}/${index}/cover.jpg`)
@@ -153,7 +158,6 @@ function initSpContent(team, year) {
   $('<div>').text(`募資階段：${team.funding}`).appendTo(intro);
   intro.addClass('label-text');
   var detail = $('.detail');
-  console.log(team)
   var imgs = 'imgs' in team ? team.imgs :  2
   team.section.forEach((text, i) => {
     var block = $('<div>')
