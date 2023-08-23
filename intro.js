@@ -136,6 +136,9 @@ function initSpContent(team, year) {
     var vid = $('#sp-content-vid')
     vid.addClass('video')
     $('<div>').attr('id', 'player').appendTo(vid);
+    if(!player) {
+      onYouTubeIframeAPIReady();
+    }
   }
   var cover = $('.cover-photo');
   $('<img>')
