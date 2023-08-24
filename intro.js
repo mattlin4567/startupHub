@@ -62,6 +62,7 @@ function initImagesCarousel(team, year) {
     var item = $('<div>').addClass('item').appendTo(list);
     var container = $('<div>').addClass('video-container').appendTo(item);
     $('<div>').attr('id', 'player').appendTo(container);
+    loadIFramePlayerAPI();
     $('<li>')
       .attr('data-target', '#myCarousel')
       .attr('data-slide-to', indicatorIndex)
@@ -125,6 +126,13 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
+function loadIFramePlayerAPI() {
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+}
+
 function getTeamYear() {
   var results = new RegExp('[?&]year=([^&#]*)').exec(window.location.search);
   return results !== null ? results[1] || 0 : false;
@@ -136,9 +144,7 @@ function initSpContent(team, year) {
     var vid = $('#sp-content-vid')
     vid.addClass('video')
     $('<div>').attr('id', 'player').appendTo(vid);
-    if(!player) {
-      onYouTubeIframeAPIReady();
-    }
+    loadIFramePlayerAPI();
   }
   var cover = $('.cover-photo');
   $('<img>')
