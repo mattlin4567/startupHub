@@ -78,16 +78,16 @@ function loadYouTube(year) {
 
 // 確保影片會事先載入
 function onYouTubeIframeAPIReady() {
-  loadYouTube('112');
+  loadYouTube('113');
   if (selectedTeam.length > 0) {
     initPage(selectedTeam);
   }
 }
 
-var selectedTeam = ['112'];
+var selectedTeam = ['113'];
 
 $(document).ready(function () {
-  var TOTALYEAR = ['108', '109', '110', '111', '112'];
+  var TOTALYEAR = ['108', '109', '110', '111', '112', '113'];
   $('.float').hover(
     function () {
       $(this).stop().animate({ right: '0' }, 'medium');

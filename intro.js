@@ -3,6 +3,7 @@ var player;
 function initIntro(team) {
   var description = $('.project_description');
   var buttonGroup = $('#social-link');
+  console.log(team)
   $('#team_name h4 span').text(team.name);
   team.intro.forEach((element) => {
     $('<p>').text(element).appendTo(description);
@@ -206,7 +207,7 @@ $(document).ready(function () {
   var carouselInner = $('.carousel-inner');
   carouselInner.height(Math.ceil($(carouselInner).width() / 16 * 9));
   var data = TEAMS[teamYear];
-  if(teamYear==='112') {
+  if(Number(teamYear)>=112) {
     $('.intro-content').hide();
     initSpContent(data[teamIndex], teamYear);
   } else {
