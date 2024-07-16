@@ -186,6 +186,10 @@ html {
   letter-spacing: 2px;
 }
 
+.label-text > div:first-child {
+  white-space: nowrap;
+}
+
 /* owl-carousel 客製化 */
 
 .owl-item > img {
