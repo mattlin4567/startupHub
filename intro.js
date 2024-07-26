@@ -157,7 +157,7 @@ function initSpContent(team, year) {
     .appendTo($('.cover'));
   $('<p>')
     .text(`圖片來源：由${team.name}提供`)
-    .css('float', 'right')
+    .css('text-align', 'end')
     .css('color', '#787878')
     .appendTo(cover);
   var intro = $('.intro');
