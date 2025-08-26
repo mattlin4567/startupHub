@@ -87,7 +87,7 @@ function onYouTubeIframeAPIReady() {
 var selectedTeam = ['113'];
 
 $(document).ready(function () {
-  var TOTALYEAR = ['108', '109', '110', '111', '112', '113'];
+  var TOTALYEAR = ['108', '109', '110', '111', '112', '113', '114'];
   $('.float').hover(
     function () {
       $(this).stop().animate({ right: '0' }, 'medium');
