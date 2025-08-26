@@ -84,7 +84,7 @@ function onYouTubeIframeAPIReady() {
   }
 }
 
-var selectedTeam = ['113'];
+var selectedTeam = ['114'];
 
 $(document).ready(function () {
   var TOTALYEAR = ['108', '109', '110', '111', '112', '113', '114'];
