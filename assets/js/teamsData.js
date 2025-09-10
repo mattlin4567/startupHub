@@ -1554,7 +1554,7 @@ const TEAMS = {
         "目前團隊會先以關鍵技術商品化為首要任務，並規劃相輔相成的產品為廣度。"
       ],
       "web": "",
-      "youtube": "O27PV1W8ppg",
+      "youtube": "NhvnTEjlhog",
       "resource": "尋求配合的廠商或生產化妝品等級的實驗室做產品的商品化"
     },
     {
