@@ -152,7 +152,7 @@ function initSpContent(team, year) {
     .attr('src', `./assets/images/${year}/${index}/cover.jpg`)
     .attr('onerror', 'this.src="./assets/images/sme.jpg"')
     .css('width', '100%')
-    .css('max-height', '500px')
+    .css('aspect-ratio', 'auto')
     .css('object-fit', 'cover')
     .appendTo($('.cover'));
   $('<p>')
@@ -187,7 +187,7 @@ function initSpContent(team, year) {
         .attr('onerror', 'this.src="./assets/images/sme.jpg"')
         .css('margin-top', '16px')
         .css('width', '100%')
-        .css('max-height', '500px')
+        .css('aspect-ratio', 'auto')
         .css('object-fit', 'cover')
         .appendTo(block);
     }
