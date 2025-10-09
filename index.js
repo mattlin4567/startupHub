@@ -40,7 +40,7 @@ function initPage(years) {
   var mobile = $('<div>').addClass('visible-xs-block');
   years.forEach((y) => {
     var data = TEAMS[y];
-    $(data).each(function (index, team) {
+    $(data).filter(team => !team.hidden).each(function (index, team) {
       var col = $('<div>').addClass('span3').appendTo(row);
       col.append(createCards(team, y));
       sideMenu.append(createSideMenu(team));
