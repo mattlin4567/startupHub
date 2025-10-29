@@ -3,10 +3,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- 可移除 -->
-        <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
-        <script language="javascript" type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap2.3.css" />
+        <!-- 升級套件 -->
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <script language="javascript" type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
         <!------->
         <script language="javascript" type="text/javascript" src="index.js"></script>
@@ -35,7 +35,7 @@
             <input style="display: none;" id="search" type="text" class="input-large search-query"
                 placeholder="請輸入團隊名稱">
         </div>
-        <div class="float hidden-xs" style="display: none;right: -20vw;">
+        <div class="float d-none d-md-block" style="display: none;right: -20vw;">
             <div class="side-menu-title">
                 團隊列表
             </div>
@@ -45,7 +45,7 @@
         <div class="cv-spinner container" style="display: none;">
             <span class="spinner"></span>
         </div>
-        <div class="container visible-xs-block" id="team-list">
+        <div class="container d-block" id="team-list">
         </div>
     </body>
 

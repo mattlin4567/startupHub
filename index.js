@@ -36,12 +36,12 @@ function createMobileList(data, year) {
 function initPage(years) {
   var list = $('#team-list');
   var sideMenu = $('.side-menu');
-  var row = $('<div>').addClass('row form-group hidden-xs');
-  var mobile = $('<div>').addClass('visible-xs-block');
+  var row = $('<div>').addClass('row form-group d-none d-md-flex');
+  var mobile = $('<div>').addClass('d-block d-md-none');
   years.forEach((y) => {
     var data = TEAMS[y];
-    $(data).filter(team => !team.hidden).each(function (index, team) {
-      var col = $('<div>').addClass('span3').appendTo(row);
+    data.filter(team => !team.hidden).forEach(function (team) {
+      var col = $('<div>').addClass('col-12 col-sm-6 col-md-4 col-lg-3').appendTo(row);
       col.append(createCards(team, y));
       sideMenu.append(createSideMenu(team));
       mobile.append(createMobileList(team, y));
